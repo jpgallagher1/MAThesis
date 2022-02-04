@@ -1,0 +1,17 @@
+desktop.ini
+
+*.aux
+
+*.bbl
+*.bcf
+*.blg
+*.dvi
+*.lof
+
+*.log
+
+*.lot
+
+*.toc
+*.xml
+*.gz

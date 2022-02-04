@@ -8,7 +8,25 @@
 \input{Settings/settings}
 %\usepackage{TCbasic}
 
+
+%==========%
+% biblatex %
+%==========%
+
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{thesis.bib}
+
+
+
+%=========================%
+% CUSTOM PACKAGES GO HERE %
+%=========================%
+%\usepackage{TCbasic}
+\usepackage{xcolor} % here as example, can be removed
+
+
 \begin{document}
+
 \thesistitle
 
 \input{Content/introduction}
