@@ -1,9 +1,9 @@
 %================================================================================================% 
 % thesis.tex                                                                                     %
-% This is the main file, which calls up preamble.tex, frontmatter.tex, and thesis.bib as needed. %
+% This is the main file, which calls up preamble.tex, front-matter.tex, and thesis.bib as needed. %
 %================================================================================================%
 
-% Frontmatter shortcuts; note the extra space at the end, which is unfortunately necessary:      
+% Front-matter shortcuts; note the extra space at the end, which is unfortunately necessary:      
 \newcommand\myname{John P Gallagher }
 \newcommand\mytitle{AN ERDOS SIMILARITY PROBLEM IN A TOPOLOGICAL SETTING } % The graduate division requires this to be in caps.
 \newcommand\mydegree{Master of Arts } % change to  Master of Science if applicable
@@ -39,9 +39,10 @@
 \begin{document}
 \thesistitle
 % Main body of work:
+\input{Content/introduction.tex}
 \input{content}
-\section{A Cantor set with positive Newhouse Thickness is not universal}
 \input{Content/positiveNewhouseThickness.tex}
+\input{Content/activeWorkingQuestions.tex}
 \input{Content/appendixA.tex}
 %==============%
 % Bibliography %

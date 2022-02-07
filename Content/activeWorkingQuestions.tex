@@ -1,18 +1,15 @@
-\newpage
-\section{Zero Newhouse Thickness} 
+\section{Current Research Questions: Zero Newhouse Thickness} 
 %Here are a few notes from today's meeting.  In particular we are now exploring adjacent problems, and trying to understand more properties of our construction, and which portions of our theorem are sufficient, necessary, and unnecessary.  
 This section is devoted to study  if Cantor sets with zero Newhouse thickness can be universal. We first  provide an example for  which two Cantor sets with zero Newhouse thickness can still have arithmetic sum equal  to an interval,  showing that the converse of theNewhouse thickness theorem us  not true.   %is one example where we construct two appropriate cantor set with zero Newhouse thickness that combine to create an interval. 
 %One question we have about Newhouse Thickness: Can we repeat the same process as above but with Newhouse Thickness $0$?  That is to say, positive Newhouse thickness is sufficient condition for our theorem.  As a refinement, what are the necessary conditions for a Cantor set to not be universal? 
 \begin{example}
 {\rm Let $N_1, N_2, \dots \in \N_{\geq 2}$. Consider the following construction of a Cantor set using a decomposition of the unit intervals. }
-$$
-\begin{aligned}
+$$\begin{aligned}
 [0,1] = &\frac{1}{N_1}\{0,1, \dots, N_1-1\} + \left[0,\frac{1}{N_1}\right]\\
  = & \frac{1}{N_1}\{0,1, \dots, N_1-1\} + \frac{1}{N_1 N_2}\{0,1, \dots, N_2-1\} + \left[0,\frac{1}{N_1 N_2}\right]\\
  =&...\\
  =&\frac{1}{N_1}\{0,1, \dots, N_1-1\} +  \frac{1}{N_1 N_2}\{0,1, \dots, N_2-1\} + \dots + \frac{1}{N_1 \cdots N_n} \{0,\dots, N_n \}+ \dots
-\end{aligned}
-$$
+\end{aligned}$$
 {\rm From here we can define the two cantor sets $K_1, K_2$ where $K_1$ constitutes the odd indices sets in the above summands and $K_2$ has the even one.   This gives the following constructions for the two Cantor sets: }
 $$K_1 = \frac{1}{N_1}\{0,1, \dots, N_1-1\}  + \dots + \frac{1}{N_1 \cdots N_{2n+1}} \{0,\dots, N_{2n+1}-1 \}+ \dots$$
 $$K_2 = \frac{1}{N_1N_2}\{0,1, \dots, N_2-1\}  + \dots +\frac{1}{N_1 \cdots N_{2n}} \{0,\dots, N_{2n}-1 \}+ \dots$$
@@ -112,5 +109,5 @@ For the second point, our proof inherently relies on appropriately selecting a s
 
 A current tool we are exploring is tracking how scaling and translating the collection of intervals $\{O_j\}_{j \in \N }$ by some appropriate bound $M$ such that we can scale our cantor set by $\frac{1}{M^d}$, and demonstrate an appropriate intersection with $X^c$.  
 
-        The last question we discussed for the day focused on how scaling Cantor sets, and scaling intervals are interrelated.  With Newhouse thickness, because it relies off of the ratios of $\frac{I_j}{O_{j-1}}$ the scaling factor drops out.  Unfortunately if we are considering Cantor sets with Newhouse thickness $0$, then there is no corresponding Cantor set with infinite Newhouse thickness.  The issue is that from the theorem, the thickness is the product of the two sets so for any finite thickness $0\cdot \tau(C) = 0$.  Therefore Newhouse thickness will not be enough to describe the appropriate construction of the interval.  There are a few workarounds that might be possible.  In Astels' paper\cite{Astels} there is a generalized for for countably many cantor sets. Similarly we might be able to find another characterization (measure, dimension etc) of the set, to appropriately find $\lambda$ and or, another way to combine the two intervals, such that we have a non-empty intersection with $X^c$.  
+The last question we discussed for the day focused on how scaling Cantor sets, and scaling intervals are interrelated.  With Newhouse thickness, because it relies off of the ratios of $\frac{I_j}{O_{j-1}}$ the scaling factor drops out.  Unfortunately if we are considering Cantor sets with Newhouse thickness $0$, then there is no corresponding Cantor set with infinite Newhouse thickness.  The issue is that from the theorem, the thickness is the product of the two sets so for any finite thickness $0\cdot \tau(C) = 0$.  Therefore Newhouse thickness will not be enough to describe the appropriate construction of the interval.  There are a few workarounds that might be possible.  In Astels' paper\cite{Astels} there is a generalized for for countably many cantor sets. Similarly we might be able to find another characterization (measure, dimension etc) of the set, to appropriately find $\lambda$ and or, another way to combine the two intervals, such that we have a non-empty intersection with $X^c$.  
 
