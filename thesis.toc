@@ -1,0 +1,21 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Introduction to the Introduction}{1}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.1}Introduction to the Introduction to the Introduction}{1}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}The Real Stuff}{4}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Various Tricks}{4}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Math}{6}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Graphics}{8}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Bibliographic Stuff}{9}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}A Cantor set with positive Newhouse Thickness is not universal}{9}{}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Appendix A: Triangulations of Polytopes}{13}{}%

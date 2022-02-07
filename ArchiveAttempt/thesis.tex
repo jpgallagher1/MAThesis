@@ -1,0 +1,44 @@
+%______________________________________________________________________________%
+% thesis.tex                                                                   
+% This is the main file, which calls up preamble.tex, frontmatter.tex, and
+% thesis.bib as needed. 
+%______________________________________________________________________________%
+%1234567890123456789012345678901234567890123456789012345678901234567890123456789
+
+\input{Settings/settings}
+%\usepackage{TCbasic}
+
+
+%==========%
+% biblatex %
+%==========%
+
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{thesis.bib}
+
+
+
+%=========================%
+% CUSTOM PACKAGES GO HERE %
+%=========================%
+%\usepackage{TCbasic}
+\usepackage{xcolor} % here as example, can be removed
+
+
+\begin{document}
+
+\thesistitle
+
+\input{Content/introduction}
+% Main body of work:
+\input{Content/content}
+
+%==============%
+% Bibliography %
+%==============%
+
+%BibLatex :
+\printbibliography
+
+\end{document}
+ 

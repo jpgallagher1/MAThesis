@@ -1,13 +1,27 @@
-%______________________________________________________________________________%
-% thesis.tex                                                                   
-% This is the main file, which calls up preamble.tex, frontmatter.tex, and
-% thesis.bib as needed. 
-%______________________________________________________________________________%
-%1234567890123456789012345678901234567890123456789012345678901234567890123456789
+%================================================================================================% 
+% thesis.tex                                                                                     %
+% This is the main file, which calls up preamble.tex, frontmatter.tex, and thesis.bib as needed. %
+%================================================================================================%
 
-\input{Settings/settings}
-%\usepackage{TCbasic}
+% Frontmatter shortcuts; note the extra space at the end, which is unfortunately necessary:      
+\newcommand\myname{John P Gallagher }
+\newcommand\mytitle{AN ERDOS SIMILARITY PROBLEM IN A TOPOLOGICAL SETTING } % The graduate division requires this to be in caps.
+\newcommand\mydegree{Master of Arts } % change to  Master of Science if applicable
+\newcommand\myfield{Mathematics } % e.g., Mathematics
+\newcommand\thismonth{May } % graduation month: May / August / December
+\newcommand\thisyear{2022 } % e.g., 2014
 
+\newcommand\myadviser{Dr. Chun-Kit Lai} % Adviser
+\newcommand\myadviserstitle{Associate Professor}
+\newcommand\committeememberone{Dr. Emily Clader} % Committee member 1
+\newcommand\committeememberonetitle{Assistant Professor} 
+\newcommand\committeemembertwo{Dr. Arek Goetz} % Committee member 2
+\newcommand\committeemembertwotitle{Professor}
+
+\documentclass[12pt,oneside]{sfsuthesis}  
+%WHEN THESIS IS COMPLETED, CHANGE THE NEXT LINE FROM draft TO final, then the paper will be formatted according to the Graduate Division's guidelines
+\usepackage[final]{MAThesisOutputFormat}
+\RequirePackage{standalone}
 
 %==========%
 % biblatex %
@@ -16,23 +30,19 @@
 \usepackage[backend=biber,style=numeric]{biblatex}
 \addbibresource{thesis.bib}
 
-
-
 %=========================%
 % CUSTOM PACKAGES GO HERE %
 %=========================%
-%\usepackage{TCbasic}
-\usepackage{xcolor} % here as example, can be removed
 
+%\usepackage{TCbasic}
 
 \begin{document}
-
 \thesistitle
-
-\input{Content/introduction}
 % Main body of work:
-\input{Content/content}
-
+\input{content}
+\section{A Cantor set with positive Newhouse Thickness is not universal}
+\input{Content/positiveNewhouseThickness.tex}
+\input{Content/appendixA.tex}
 %==============%
 % Bibliography %
 %==============%
@@ -41,4 +51,3 @@
 \printbibliography
 
 \end{document}
- 

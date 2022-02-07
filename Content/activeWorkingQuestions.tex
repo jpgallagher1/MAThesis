@@ -1,0 +1,116 @@
+\newpage
+\section{Zero Newhouse Thickness} 
+%Here are a few notes from today's meeting.  In particular we are now exploring adjacent problems, and trying to understand more properties of our construction, and which portions of our theorem are sufficient, necessary, and unnecessary.  
+This section is devoted to study  if Cantor sets with zero Newhouse thickness can be universal. We first  provide an example for  which two Cantor sets with zero Newhouse thickness can still have arithmetic sum equal  to an interval,  showing that the converse of theNewhouse thickness theorem us  not true.   %is one example where we construct two appropriate cantor set with zero Newhouse thickness that combine to create an interval. 
+%One question we have about Newhouse Thickness: Can we repeat the same process as above but with Newhouse Thickness $0$?  That is to say, positive Newhouse thickness is sufficient condition for our theorem.  As a refinement, what are the necessary conditions for a Cantor set to not be universal? 
+\begin{example}
+{\rm Let $N_1, N_2, \dots \in \N_{\geq 2}$. Consider the following construction of a Cantor set using a decomposition of the unit intervals. }
+$$
+\begin{aligned}
+[0,1] = &\frac{1}{N_1}\{0,1, \dots, N_1-1\} + \left[0,\frac{1}{N_1}\right]\\
+ = & \frac{1}{N_1}\{0,1, \dots, N_1-1\} + \frac{1}{N_1 N_2}\{0,1, \dots, N_2-1\} + \left[0,\frac{1}{N_1 N_2}\right]\\
+ =&...\\
+ =&\frac{1}{N_1}\{0,1, \dots, N_1-1\} +  \frac{1}{N_1 N_2}\{0,1, \dots, N_2-1\} + \dots + \frac{1}{N_1 \cdots N_n} \{0,\dots, N_n \}+ \dots
+\end{aligned}
+$$
+{\rm From here we can define the two cantor sets $K_1, K_2$ where $K_1$ constitutes the odd indices sets in the above summands and $K_2$ has the even one.   This gives the following constructions for the two Cantor sets: }
+$$K_1 = \frac{1}{N_1}\{0,1, \dots, N_1-1\}  + \dots + \frac{1}{N_1 \cdots N_{2n+1}} \{0,\dots, N_{2n+1}-1 \}+ \dots$$
+$$K_2 = \frac{1}{N_1N_2}\{0,1, \dots, N_2-1\}  + \dots +\frac{1}{N_1 \cdots N_{2n}} \{0,\dots, N_{2n}-1 \}+ \dots$$
+{\rm From this construction we see that $K_1 + K_2 = [0,1]$ is the interval but from the definition of Newhouse thickness, }
+$$\tau(K_1) = \inf \left\{\frac{1}{N_1-1}, \frac{1}{N_3-1},\dots\right\} = 0 $$
+$$\tau(K_2) = \inf \left\{\frac{1}{N_2-1}, \frac{1}{N_4-1},\dots\right\} = 0.$$
+{\rm Therefore we have created an interval from two sets with Newhouse thickness $0$ if we have $\lim_{n\to\infty} N_n = \infty$. }
+\end{example}
+\vspace{0.5cm}  
+
+%The next steps are explorations on which conditions are sufficient, and which conditions are necessary.  
+
+We ask the following questions. Recall $I_J$ denotes the smallest closed interval containing the Cantor set $J$ and $O_J$ denotes  the largest open interval in $I_J\setminus J$. 
+
+
+\begin{enumerate}
+    \item Given a Cantor set $J$, does there exist some $K$ such that $J+K = I_J + I_K$?
+    \item If we assume that there exists $K$ such that  $J +K = I_j + I_K$, can we prove that $J$ is not universal?
+    \item (rescaling condition) If we assume that $|\lambda_1 I_J| \geq |\lambda_2 O_K|, |\lambda_2 I_K| \geq |\lambda_1 O_J|$ and  $J +K = I_J + I_K $, then $ \lambda_1 J + \lambda_2 K = \lambda_1 I_J + \lambda_2 I_k$.
+\end{enumerate}
+
+We also notice that to solve the second question, we notice that $J+K = I_J+I_K$ implies that 
+$$
+(J+a)+(K+b) = (I_J+a)+(I_K+b) \ \mbox{and} \  bJ+bK = bI_J+bI_K.
+$$
+We can always translate and rescale $J,K$ so that $I_J = [0,a]$ and $I_K = [0,1]$. Moreover, the following lemma is important. 
+
+\begin{lemma}\label{lemma_gap}
+Suppose that the Cantor sets $J$ and $K$ satisfies $J +K = I_j + I_K$. Then $|I_J| \ge |O_K|$ and $|I_K|\ge |O_J|$.
+\end{lemma}
+
+\medskip
+
+The lemma also said that  the condition $|\lambda_1 I_J| \geq |\lambda_2O_k|, |\lambda_2 I_k| \geq |\lambda_1 O_J|$ is necessary in the rescaling  condition. 
+
+\medskip
+
+\begin{proposition}
+Let $J$ be a Cantor set such that $J+K = I_J+I_K$ where $I_J = [0,a]$ and $I_K = [0,1]$. Suppose that the rescaling condition (3) holds. Then $J$ is not universal in the collection of dense $G_{\delta}$. 
+\end{proposition}
+
+\begin{proof}
+The proof is similar to the proof in Theorem  \ref{theorem_positive_NW}. With $K$ given in the assumption. We can assume that $|I_J|>|O_K|$. Suppose that $|I_J| = |O_K|$. Since $|O_J|<1$, we can choose $\epsilon$ such that $(1-\epsilon) > |O_J|.$  Then we consider $K' = (1-\epsilon)K$ and we will have $|I_J|> (1-\epsilon)|O_K|$. In this case, by the rescaling condition,  $J+K' = I_J+I_{K'}$ and we have another $K'$ such that $|I_J|>|O_{K'}|$.  
+
+\medskip
+
+As now we have $|I_J|>|O_K|$, we can find $0<\rho<1$ such that $\rho |I_J| > |O_K|$. We now define  
+$$
+X = \bigcup_{n\in{\mathbb Z}}\bigcup_{\ell\in\Z} \rho^n (K+\ell). 
+$$
+Then $X^c$ is a  dense $G_{\delta}$ set. Suppose that we have an affine copy $t+\lambda J$, we would like to claim that $t+\lambda J$ intersects non-trivially   with $\rho^n (K+\ell)$ for some $n,\ell\in \Z$, which will complete the proof of the theorem. 
+
+\medskip
+
+
+To justify the claim, we let $0<\rho<1$ take the unique $n$ such that 
+\begin{equation}\label{eq_lambda_choice}
+    |\lambda| \in [\rho^{n+1}, \rho^{n})
+\end{equation}
+and the  unique $\ell\in\Z$ such that 
+\begin{equation}\label{eq_t_choice}
+t \in (\ell  \rho^n, (\ell+1)\rho^n].    
+\end{equation}
+Then we consider the arithmetic sum $\rho^n K-\lambda J$. We now check the assumption in  the rescaling condition with $\lambda_1=\rho^n$ and  $\lambda_2 = -\lambda$. Indeed,
+$$
+|\lambda_2 I_J| \ge \rho^{n+1}|I_J| = |\lambda_1| (\rho |I_J|) \ge  |\lambda_1 O_K| 
+$$
+by our choice of $\rho$. On the other hand, 
+$$
+|\lambda_1 I_K| \ge |\lambda|\ge |\lambda_2 O_J|
+$$
+since $|I_K|\ge |O_J|$ by Lemma \ref{lemma_gap}. Hence, using the rescaling condition, 
+$$
+\rho^n K -\lambda J= \rho^n I_K-\lambda I_J. 
+%\begin{array}{ll}
+%[-\lambda a, \rho^n] & \mbox{if $\lambda>0$} \\
+%[0,\rho^n-\lambda a] & \mbox{if $\lambda<0$}
+%\end{array}
+$$
+If $\lambda>0$, then we have 
+$$
+\rho^n (K+\ell) -\lambda J = [\rho^n\ell-\lambda a, \rho^n(1+\ell)]
+$$
+which contains $t$ by (\ref{eq_t_choice}). Similarly, if $\lambda<0$, then 
+$$
+\rho^n (K+\ell) -\lambda J = [\rho^n\ell,\rho^n(\ell+1)-\lambda a].
+$$
+It also contains $t$ by (\ref{eq_t_choice}). The proof is now complete. 
+\end{proof}
+
+
+************
+
+From these questions we have several difficulties associated with each.  For the first item it is not always clear which cantor sets can be added to each other.  Similarly it is difficult to construct a complementing Cantor set because of the difficulties tracking the notation for the different possible open intervals.  There maybe some existing tools. It may also just be messy. 
+
+For the second point, our proof inherently relies on appropriately selecting a scalar and translation that corresponds to a regular (or fairly regular) Cantor set.  In this instance we have to find pick the appropriate $\lambda, t$ based off of a set of associated intervals that are not uniform.  Our proof relies on using the regularity to specify where the intersection is. 
+
+A current tool we are exploring is tracking how scaling and translating the collection of intervals $\{O_j\}_{j \in \N }$ by some appropriate bound $M$ such that we can scale our cantor set by $\frac{1}{M^d}$, and demonstrate an appropriate intersection with $X^c$.  
+
+        The last question we discussed for the day focused on how scaling Cantor sets, and scaling intervals are interrelated.  With Newhouse thickness, because it relies off of the ratios of $\frac{I_j}{O_{j-1}}$ the scaling factor drops out.  Unfortunately if we are considering Cantor sets with Newhouse thickness $0$, then there is no corresponding Cantor set with infinite Newhouse thickness.  The issue is that from the theorem, the thickness is the product of the two sets so for any finite thickness $0\cdot \tau(C) = 0$.  Therefore Newhouse thickness will not be enough to describe the appropriate construction of the interval.  There are a few workarounds that might be possible.  In Astels' paper\cite{Astels} there is a generalized for for countably many cantor sets. Similarly we might be able to find another characterization (measure, dimension etc) of the set, to appropriately find $\lambda$ and or, another way to combine the two intervals, such that we have a non-empty intersection with $X^c$.  
+

@@ -1,0 +1,307 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{MAThesisOutputFormat}[2018/02/25 MAThesisOutputFormat]
+
+\RequirePackage{amsthm,amsmath,amssymb,amsfonts,latexsym,graphicx,enumerate,setspace,verbatim,tocloft,rotating}
+%\RequirePackage{color}                       % For creating colored text and background
+%\RequirePackage{hyperref}                 % For creating hyperlinks in cross references
+% other possibly useful packages: textcomp,mathrsfs,amscd,epsfig,euscript,cancel
+
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\X}{\mathbf{X}}
+\newcommand{\Y}{\mathbf{Y}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\nullsp}{\text{null}}
+\newcommand{\range}{\text{range }}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\ima}{Im}
+\DeclareMathOperator{\spn}{span}
+
+
+%%%%% Draft title page
+\newcommand\thesistitle{
+\thispagestyle{empty}
+
+\[ \]
+\vspace{1in}
+
+\begin{center}
+{\Large \bf \mytitle}
+
+\vspace{1.5in}
+
+\myname
+
+\vspace{1.5in}
+
+Version of \today
+
+\end{center}
+
+\newpage
+\tableofcontents 
+
+}
+
+
+
+
+\DeclareOption{draft}{
+%%%%% Layout
+\voffset=-.8in 
+\oddsidemargin=0in
+\evensidemargin=0in
+\textwidth=6.5in
+\textheight=9in
+\pagestyle{plain}
+
+%%%%% Style of theorems, definitions, examples, equations, etc.
+
+\theoremstyle{plain} % Heading is bold, text italic.
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}{Conjecture}[chapter]
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+
+\theoremstyle{remark}  % Heading is italic, text is roman
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem{claim}{Claim}[chapter]
+
+%%%%% Appendix style
+
+\renewcommand\appendix[1]{
+\chapter*{#1}
+\addcontentsline{toc}{chapter}{#1}
+}
+
+%%%%% Comment command, useful for editing
+
+\renewcommand\comment[1]{{\sc Comment:} {\bf #1}}
+
+}
+
+
+
+
+
+%======= Copied from Preamble.tex 
+\DeclareOption{final}{
+
+%%%%% Layout
+% These numbers might depend on your printer. Check the margins and compare them to the Graduate Division's
+% guidelines. If there's something off, try playing with the numbers...
+%
+% For chapters:
+%     Must have a minimum of 1.5in margin on left and 1in on all other sides.  Where there are page numbers
+%     (whether on top or bottom), must have one additional inch between the page number and the text, for a
+%     total of 2in between the edge of the paper and the text.
+% For frontmatter pages:
+%     The same margin numbers generally work, except for the Title Page, so you will notice that we use
+%     some numbers for \textheight and \footskip right here, and then change them below, right after
+%     generating the Title Page.
+
+\hoffset=.5in 
+\oddsidemargin=0in   % = 1in because LaTeX adds 1in
+\evensidemargin=0in  % = 1in because LaTeX adds 1in
+\topmargin=0in       % = 1in because LaTeX adds 1in
+\headheight=0in
+\headsep=1in         % Distance from top of pagenum (for page numbers at top-right corner of page) to text
+\footskip=1.2in      % Distance from bottom of text to the page number (for page number at bottom of page)
+\textwidth=5.9in     % Should be 6in, but use 5.9in to be conservative
+\textheight=8.0in    % Best for Title Page (will change after the Title Page)
+
+\pagestyle{plain}
+
+\doublespacing
+
+%%%%% Style of theorems, definitions, examples, equations, etc.
+
+\theoremstyle{plain} % Heading is bold, text italic.
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}{Conjecture}[chapter]
+
+\theoremstyle{definition}  % Heading is bold, text is roman
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+
+\theoremstyle{remark}  % Heading is italic, text is roman
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+\newtheorem{claim}{Claim}[chapter]
+
+%%%%% Appendix style
+
+\renewcommand\appendix[1]{
+\chapter*{#1}
+\addcontentsline{toc}{chapter}{#1}
+}
+
+\renewcommand\thesistitle{
+
+\pagenumbering{roman}
+\thispagestyle{empty}
+
+\[ \]
+\vspace{-1.9in}
+
+\begin{center}
+{\mytitle}
+
+\vspace{1.4in}
+
+\singlespace{A thesis presented to the faculty of\\
+San Francisco State University\\
+In partial fulfilment of\\
+The Requirements for\\ The Degree}
+
+\vspace{.5in}
+
+\singlespace{\mydegree \\ In\\ \myfield}
+
+\vspace{3.1in}
+
+{by \\[12pt] 
+\myname \\[12pt]
+San Francisco, California\\[12pt]
+\thismonth
+\thisyear}
+\end{center}
+
+\newpage
+\textheight=7.1in    % For all pages after the Title Page -- try making this number smaller (7.0 or 6.9) if the bottom margins are too small
+\footskip=1.1in      % Distance from bottom of text to the page number (for page number at bottom of page)
+\thispagestyle{empty}
+
+$\mbox{}$
+\vspace{3in}
+\begin{center}
+\singlespace{
+Copyright by\\ 
+\myname \\
+\thisyear
+}
+\end{center}
+
+\newpage
+\thispagestyle{empty}
+\[ \]
+\vspace{-1.8in}
+\begin{center}
+{CERTIFICATION OF APPROVAL}
+\end{center}
+\vspace{.6in}
+\begin{quote}
+I certify that I have read {\it \mytitle} by \myname and that in my opinion this work meets the criteria for approving a thesis submitted in partial fulfillment of the requirements
+for the degree: \mydegree in \myfield at San Francisco State University.
+\end{quote}
+
+\vspace{0.75in}
+
+\hspace*{\fill}\parbox{3.5in}{
+\singlespace{
+
+\hrule{\hspace{3.5in}} \\ 
+\myadviser \\
+\myadviserstitle of \myfield
+
+\vspace{1in}
+
+\hrule{\hspace{3.5in}} \\
+\committeememberone \\
+\committeememberonetitle of \myfield 
+
+\vspace{1in}
+
+\hrule{\hspace{3.5in}} \\
+\committeemembertwo \\
+\committeemembertwotitle of \myfield 
+
+}
+}
+
+\newpage
+\thispagestyle{empty}
+\[ \]
+\vspace{-1.8in}
+\begin{center}
+{\mytitle} \\
+
+\vspace{.5in}
+
+\singlespace{
+\myname \\
+San Francisco State University \\ 
+\thisyear \\
+}
+
+\end{center}
+
+\vspace{.3in}
+
+\doublespacing{\noindent
+\input{abstract} % maximum one page
+}
+
+\vspace*{\fill}
+
+\hspace*{\fill}
+
+\noindent
+I certify that the Abstract is a correct representation of the content of this thesis.
+
+\vspace{.6in} 
+
+\hrule{\hspace{3.75in}} \\[-10pt]
+Chair, Thesis Committee 
+\hspace{2.5in}
+Date
+
+\newpage
+\[ \]
+\vspace{-1.8in}
+\begin{center}{ACKNOWLEDGMENTS}\end{center}
+
+\vspace{.3in}
+\begin{quote}
+\noindent
+\input{acknowledgements}
+\end{quote}
+
+\renewcommand{\contentsname}{\vspace{-1.8in} \begin{center} \normalsize \rm TABLE OF CONTENTS \end{center}}
+\renewcommand{\listfigurename}{\vspace{-1.8in} \begin{center} \normalsize \rm LIST OF FIGURES \end{center}}
+\renewcommand{\listtablename}{\vspace{-1.8in} \begin{center} \normalsize \rm LIST OF TABLES \end{center}}
+\renewcommand{\cftchapfont}{\normalfont}
+\renewcommand{\cftchappagefont}{\normalfont}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % formatting commands for table of contents
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecpagefont}{\normalfont}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\newpage \tableofcontents 
+\newpage Table \hfill Page \listoftables % comment out if you don't use tables
+\newpage Figure \hfill Page \listoffigures % comment out if you don't use figures
+
+\newpage
+\pagestyle{myheadings}
+\pagenumbering{arabic} 
+\setcounter{page}{1}
+
+}
+}
+
+\ProcessOptions\relax
