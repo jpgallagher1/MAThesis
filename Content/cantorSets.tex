@@ -1,7 +1,10 @@
 \section{Cantor Sets}
+The Cantor set is defined by taking the interval $[0,1]$ and then interatively removing the open interval containing the middle third, from the previous level.  
 
-\begin{definition}{Cantor's Set}
-    Middle Third Cantor Set
+Formally this can be written as follows.
+\begin{definition}[Cantor Set]
+    The Cantor set $\mathcal{C}$, written as the successive removal of each middle third removed from the previous level is 
+    $$\mathcal{C} = [0,1] \setminus \bigcup_{n=0}^\infty\bigcup_{k=0}^{3^n-1}\left(\frac{3k+1}{3^{n+1}},\frac{3k+2}{3^{n+1}}\right)$$
 \end{definition}
 
 \begin{definition}{Generalized Cantor's Set}

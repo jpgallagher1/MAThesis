@@ -1,0 +1,32 @@
+\section{Topological versus Measure Theoretic Size}
+
+Topological size is not the same thing as Measure Theoretic size. 
+
+A measure theoretically large set is not necessarily topologically large.  
+
+What do we mean by measure theoretically large? Non-zero Measure.  
+\begin{definition}[Measure]
+    Let $X$ be a set and $\Sigma$ be a $\sigma-$algebra over $X$.  A function $\mu: \Sigma \to \{\R \cup \infty\}$ is called a measure if it satisfies the following properties:
+    \begin{enumerate}
+        \item \textbf{Non-negativity}: for all $E \in \Sigma$, $\mu(E)\geq 0$.
+        \item \textbf{Null empty set}: $\mu(\emptyset) = 0$. 
+        \item \textbf{Countable Additivity} ($\sigma$-additivity): For all countable collections $\{E_k\}_{k=1}^\infty$ of pairwise disjoint sets in $\Sigma$, $$\mu\left( \bigcup_{k=1}^\infty E_k \right) = \sum_{k=1}^\infty \mu(E_k).$$
+    \end{enumerate}
+\end{definition}
+What do we mean by topologically Large? Uncountable and dense.  It is helpful to define the opposite of topologically large, namely meager sets.  
+\begin{definition}[Nowhere Dense]  Let $X$ be a topological space.  A subset $B \subseteq X$ of a topological space is called \textit{nowhere dense} in $X$ if its closure has an empty interior.  That is to say, $B$ is \textit{nowhere dense} in $X$ if for each open set $U\subseteq X$, $B\cap U$ is not dense in $U$.      
+\end{definition}
+
+\begin{definition}[Meager]  A subset $C \subseteq X$ of a topological space is called \textit{meager} in $X$ if it is the countable union of nowhere-dense subsets of $X$.    
+\end{definition}
+
+\begin{definition}[G-Delta Set]
+    A $G_\delta$ set is the countable intersection of open sets.  Namely, let $O_i \subset X$ for $i \in \N$ be a collection of open sets of $X$.  Then 
+    $\bigcap_{n=1}^\infty O_i,$ is a $G_\delta$ set.  
+\end{definition}
+
+\begin{example}
+    The irrational numbers are a $G_\delta$ set.  Consider the following construction of the set of irrational numbers:
+    $$\R \setminus \Q = \bigcap_{q \in \Q}\R \setminus \{q\}.$$
+\end{example}
+Notice that each $\R\setminus q = (-\infty, q) \cup (q, \infty)$ is an open subset of $\R$.  Furthermore, rational numbers are countable.  Therefore the intersection of these sets are a $G_delta$ set.  Moreover, in this instance it is a dense $G_\delta$ set.  We will study these objects further.  
