@@ -5,7 +5,22 @@
 \begin{proof}
     Let $K_1, K_2$ be two Cantor sets with thickness $\tau_1, \tau_2$ respectively and assume that $K_1$ is not contained in the gap of $K_2$ and $K_2$ is not contained in the gap of $K_1$.  
 
-    For the sake of contradiction, assume that $K_1 \cap K_2 = \emptyset$.  By assumption we know that $K_1, K_2$ are not contained in the other's gaps.  Consider the gaps $U_1 \subset K_1^c$ and $U_2 \subset K_2^c$.  We call $(U_1, U_2)$ a gap-pair if $U_1$ contains exactly one boundary point of $U_2$ and $U_2$ contains exactly one point of $U_1$.  
+    Assume that $K_1 \cap K_2 = \emptyset$.  Consider the gaps $U_1 \subset K_1^c$ and $U_2 \subset K_2^c$.  We call $(U_1, U_2)$ a gap-pair if $U_1$ contains exactly one boundary point of $U_2$ and $U_2$ contains exactly one point of $U_1$.  
 
-    THIS PROOF IS UNFINISHED
+    By assumption we know that $K_1, K_2$ are not contained in the other's gaps and therefore there exists some gap-pair $(U_1, U_2).$
+
+    From the interval $U_1$ (or for that matter $U_2$) we can construct another sub-interval $U_1'$ such that $l(U_1') < l(U_1)$ (or similarly $U_2'$ such that $l(U_2')<l(U_2)).$  Notice that $(U_1',U_2)$ is still a gap-pair, as is $(U_1,U_2')$.
+    
+    Using this construction we can create a sequence of gap-pairs $(U_1^{(i)}, U_2^{(j)})$.  Notice that because it is a summable compact cantor set, the $U_1^{(i)}$ and $U_2^{(j)}$ are compact.  Moreover the sums of the lengths $$\sum_i^\infty l(U_1^{(i)}) < \infty,$$ and therefore $l((U_1^{(i)} \to 0$ as $i \to \infty$.   From this we construction we have a sequence of gap-pairs such that as $i \to \infty$, $l(U_1^{(i)}) \to 0$ and similarly as $j \to \infty$, $l(U_2^{(j)}) \to 0$.  
+    
+    Without loss of generality, we can just use the same indexing the gap pairs, $(U_1^{(i)}, U_2^{(i)})$.  If we pick a sequence of points, $q_{i} \in U_1^{(i)}$ then by the Bolzano Weierstrass theorem, there is a convergent subsequence $q_{i_k} \to q$.  Notice that $U_1^{(i)} = (a_i, b_i)$ is not fully contained in the gap of $K_2$.  Moreover because these intervals are compact and nested, we know that $a_{i_k} - b_{i_k} \to 0$ which implies that $q \in K_2$.  
+
+    Because this construction is symmetric, the same argument applies to $q_{i} \in U_2^{(i)}$ and so $q_{i_k} \to q$ implies that $q \in K_1 \cap K_2$.  
+
+    We want to use this technique to demonstrate that $K_1 \cap K_2 \neq \emptyset.$ Let $C_j^l, C_j^r$ denote the bridges of $K_j$ for $j = 1,2$.  Returning to our original assumptions, $\tau_1 \cdot \tau_2 > 1$ and therefore $$\frac{l(C_1)}{l(U_2)} \cdot \frac{l(C_2)}{l(U_1)} > 1.$$  
+    
+    From our construction, the right endpoint of $U_2$ is in $C_1^r$ or the left endpoint of $U_1$ is in $C_2^l$ or both.  
+    In the case that $q \in U_2$ is the right endpoint, then $q \in K_1$ and $q \in K_2$ and we are done.  
+    If $q \not\in K_1,$ then $q \in U_1'$, the gap of $K_1$ where $l(U_1') < l(U_1)$ and $(U_1', U_2)$ is the gap pair we need.  
+
 \end{proof}
