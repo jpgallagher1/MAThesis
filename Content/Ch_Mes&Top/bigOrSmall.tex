@@ -1,10 +1,24 @@
 \section{Topological versus Measure Theoretic Size}
 
+First we want to begin with background definitions and theorems, building the supporting context, and motivation for the research.  From the perspective of applied math, empirical results are almost always discrete observations, yet the relationships that are observed are not necessarily quantized.  This means that as we infer mathematical relationships from discrete sets, there can often be a mismatch between our theoretical model, and the true relationships.  This notion of embedded relationships is also a core area of study within pure mathematics.  Whether observing a pattern and trying to generalize the relationship to a broader context, or deducing a relationship from a different set of assumptions, discrete patters are intrinsically embedded in our universe.  
+
+It's not an accident that I use the words pattern and universe.  
+
+What do we mean by measure theoretically large? Non-zero Measure.  
+
 Topological size is not the same thing as Measure Theoretic size. 
 
 A measure theoretically large set is not necessarily topologically large.  
 
-What do we mean by measure theoretically large? Non-zero Measure.  
+\begin{definition}[$\sigma$-Algebra]
+    Let $X$ be some set and $2^X$ be the set of subsets of $X$. Let $\Sigma \subseteq 2^X$. We call $\Sigma$ a $\sigma-$algebra over $X$ if it satisfies the following three conditions:
+    \begin{enumerate}
+        \item $\emptyset \in \Sigma$
+        \item If $E \in \Sigma$, then $X\setminus E \in \Sigma$. 
+        \item If $E_1, E_2, \dots \in \Sigma$ is a sequence of subsets, then $\bigcup_{k=1}^\infty E_k \in \Sigma$. 
+    \end{enumerate}
+\end{definition}
+
 \begin{definition}[Measure]
     Let $X$ be a set and $\Sigma$ be a $\sigma-$algebra over $X$.  A function $\mu: \Sigma \to \{\R \cup \infty\}$ is called a measure if it satisfies the following properties:
     \begin{enumerate}

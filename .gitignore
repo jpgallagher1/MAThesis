@@ -15,3 +15,5 @@ desktop.ini
 *.toc
 *.xml
 *.gz
+
+*.vscode
