@@ -1,0 +1,79 @@
+\section{Topological versus Measure Theoretic Size}
+
+First we want to begin with background definitions and theorems, building the supporting context, and motivation for the research.  From the perspective of applied math, empirical results are almost always discrete observations, yet the relationships that are observed are not necessarily quantized.  This means that as we infer mathematical relationships from discrete sets, there can often be a mismatch between our theoretical model, and the true relationships.  This notion of embedded relationships is also a core area of study within pure mathematics.  Whether observing a pattern and trying to generalize the relationship to a broader context, or deducing a relationship from a different set of assumptions, discrete patters are intrinsically embedded in our universe.  
+
+
+What do we mean by measure theoretically large? Non-zero Measure.  
+
+Topological size is not the same thing as Measure Theoretic size. 
+
+A measure theoretically large set is not necessarily topologically large.  
+
+% \begin{definition}[$\sigma$-Algebra]
+%     Let $X$ be some set and $2^X$ be the set of subsets of $X$. Let $\Sigma \subseteq 2^X$. We call $\Sigma$ a $\sigma-$algebra over $X$ if it satisfies the following three conditions:
+%     \begin{enumerate}
+%         \item $\emptyset \in \Sigma$
+%         \item If $E \in \Sigma$, then $X\setminus E \in \Sigma$. 
+%         \item If $E_1, E_2, \dots \in \Sigma$ is a sequence of subsets, then $\bigcup_{k=1}^\infty E_k \in \Sigma$. 
+%     \end{enumerate}
+% \end{definition}
+
+\begin{definition}[Measure]
+    Let $X$ be a set and $\Sigma$ be a $\sigma-$algebra over $X$.  A function $\mu: \Sigma \to \{\R \cup \infty\}$ is called a measure if it satisfies the following properties:
+    \begin{enumerate}
+        \item \textbf{Non-negativity}: for all $E \in \Sigma$, $\mu(E)\geq 0$.
+        \item \textbf{Null empty set}: $\mu(\emptyset) = 0$. 
+        \item \textbf{Countable Additivity} ($\sigma$-additivity): For all countable collections $\{E_k\}_{k=1}^\infty$ of pairwise disjoint sets in $\Sigma$, $$\mu\left( \bigcup_{k=1}^\infty E_k \right) = \sum_{k=1}^\infty \mu(E_k).$$
+    \end{enumerate}
+\end{definition}
+
+In this instance, a measurable set 
+\begin{definition}[Measurable Set]
+    Let $(X,\Sigma)$ be a measurable space.  A set $S\subseteq X$ is a \textit{measurable set} if and only if $S \in \Sigma$.
+\end{definition}
+Note that a non-measurable set is a set that is not in the $\sigma$-algebra.  This curiously leads to a result that non-measurable sets, also have non-zero measure because zero measure is a measure.  
+
+\begin{example}[The Vitali Set is not Lebesgue-measurable.]
+    Consider the following equivalence relation on $\R$: 
+    $$ x\sim y \iff x-y \in \Q.$$  This is the same as the quotient group $\R \diagup \Q$.  
+
+    Notice for a moment that every single element in $\R \diagup \Q$  intersects with some element of $[0,1]$ because the $\pmod{1}$ operation is subtraction by an integer.  Therefore there is a subset of $[0,1]$ that contains exactly one representative of each element of $\R \diagup \Q$.
+    By the axiom of choice, define the Vitali set $V$ as the set of distinct representatives in $[0,1]$, one from each equivalence class. 
+    \begin{claim}The Vitali set $V$ is not Lebesgue measurable.
+    \end{claim}
+    \begin{proof}
+        
+    
+    Assume for the same of contradiction, that $V$ is measurable.
+    Consider the set of translations of $\{V_q\}$ $\pmod{1}$ , where for each $q \in \Q\cap[0,1)$, $$V_q = \{v+ q \pmod{1}: v \in V\}.$$   
+
+    Because measure is translation invariant, then each $V_q$ is also measurable.  Notice that the set $\{V_q\}$ is a countable family of pairwise disjoint sets such that 
+    $$\bigcup_{q \in \Q} V_q = [0,1].$$ 
+    Again because it is countable and pairwise disjoint, this implies that 
+    \begin{equation}\label{eqn:vitineq}
+        \big\vert [0,1] \big\vert = \sum \vert V_q\vert = \sum_{k = 1}^\infty V.
+    \end{equation}
+    By assumption $V$ is measurable, however the sum of a constant non-negative number is either $0$ or $\infty$, and $\vert [0,1]\vert \neq 0,$ and $\vert [0,1]\vert \neq \infty$.  Therefore our assumption is false and $V$ is not Lebesgue measurable.  
+    \end{proof}
+  
+\end{example}
+
+What do we mean by topologically Large? Uncountable and dense.  It is helpful to define the opposite of topologically large, namely meager sets.  
+\begin{definition}[Nowhere Dense]  Let $X$ be a topological space.  A subset $B \subseteq X$ of a topological space is called \textit{nowhere dense} in $X$ if its closure has an empty interior.  That is to say, $B$ is \textit{nowhere dense} in $X$ if for each open set $U\subseteq X$, $B\cap U$ is not dense in $U$.      
+\end{definition}
+
+\begin{definition}[Meager]  A subset $C \subseteq X$ of a topological space is called \textit{meager} in $X$ if it is the countable union of nowhere-dense subsets of $X$.    
+\end{definition}
+
+\begin{definition}[G-Delta Set]
+    A $G_\delta$ set is the countable intersection of open sets.  Namely, let $O_i \subset X$ for $i \in \N$ be a collection of open sets of $X$.  Then 
+    $\bigcap_{n=1}^\infty O_i,$ is a $G_\delta$ set.  
+\end{definition}
+
+\begin{example}
+    The irrational numbers are a $G_\delta$ set.  Consider the following construction of the set of irrational numbers:
+    $$\R \setminus \Q = \bigcap_{q \in \Q}\R \setminus \{q\}.$$
+\end{example}
+Notice that each $\R\setminus q = (-\infty, q) \cup (q, \infty)$ is an open subset of $\R$.  Furthermore, rational numbers are countable.  Therefore the intersection of these sets are a $G_delta$ set.  Moreover, in this instance it is a dense $G_\delta$ set.  We will study these objects further.  
+
+The compliment of a G-delta is an F-sigma set.  

@@ -1,0 +1,52 @@
+\section{Positive Newhouse Thickness}
+
+
+
+\section{A Cantor set with positive Newhouse Thickness is not universal}
+We  say that a set $E$ is  {\it universal} in the collection of dense $G_{\delta}$ sets if for all $G_{\delta}$ set,  we can  always find some affine copies of $E$ inside the set. By an affine copy, we  mean sets of  the form $t+\lambda E$ for some $t\in{\mathbb R}$ and $\lambda\ne 0$. A natural question we have is that  is there a nowhere dense Cantor Set that is universal in the collection of dense $G_\delta$ sets? This is an exploration of an Erd\"{o}s conjecture in a topological setting. 
+
+\begin{theorem}\label{theorem_positive_NW}
+Let $J$ be a cantor set with positive Newhouse thickness.  Then $J$ is not universal in set of dense $G_\delta$ sets.
+\end{theorem}
+
+\begin{proof} Suppose we have some Cantor set $J$ with Newhouse thickness $\tau(J) >0$. Without loss of generality, we  can assume  the convex hull of $J$ $[0,1]$.   Consider Cantor sets $K$ defined by contraction ratio $1/N$ and digits $\{0,1,...,N-1\}\setminus\{(N-1)/2\}$ and $N$ is odd. By a simple calculation,  $\tau (K) = \frac{N-1}{2}$. Therefore,  we can find a  sufficiently large $N$ so that $\tau(J)\tau(K)>1$. 
+
+\medskip
+
+Using the Cantor set $K$ Define $X$ such that $$
+X = \bigcup_{n \in \Z} \bigcup_{\ell \in \Z} N^n(K+\ell),
+$$creating a dense $F_\sigma$ set. Now consider $X^c$.  Because $K^c$ is open and dense and so is its translated and dilated copies, by the Baire Category Theorem, $X^c$ is a dense $G_{\delta}$.  We now show that $X^c$ contains no affine copy of $J$. 
+
+\medskip
+
+Suppose we have some affine copy, $t+ \lambda J$ where $t\in\R$ and $\lambda\ne 0$. There exists a unique $n$ such that 
+\begin{equation}
+    |\lambda| \in (N^{n-1}, N^n].
+\end{equation}
+Similarly there exists a unique $\ell$ such that 
+\begin{equation}
+t \in (\ell  N^n, (\ell+1)N^n].    
+\end{equation}
+We claim that this affine copy of $J$ has a non-empty intersection with $N^n(K+\ell)$.  This is equivalent to  showing that 
+$$t \in N^n(K+\ell)-\lambda J.$$
+For consistent notation with a referenced theorem, let 
+$$C_1 = N^n(K+\ell) \text{ and } C_2 = - \lambda J.$$
+First we check the construction of our Cantor sets. For $C_1$ its largest corresponding open gap interval is $|O_1| = N^{n-1}$ and its largest corresponding closed interval is $|I_1| = N^n$. For $C_2$ and is corresponding intervals, we find that $|O_2| =|\lambda|\cdot |O_J| \le |\lambda|$ and $|I_2| = |\lambda|$ where $O_J$ is the largest  open gap interval in $J$.  Therefore by our construction in (1) the following two inequalities hold: $$|O_1|\leq |I_2| \text { and } |O_2| \leq |I_1|$$ as in the condition of Theorem 2.2.1 in \cite{Astels}.  By \cite [Theorem 2.2.1]{Astels}\footnote{This might misattribute the theorem.  I think Astels '99 Theorem 2.2.1 is  actually is quoting Newhouse directly.  In particular I think it refers to Newhouse 1979 \cite{PMIHES_1979__50__101_0} \textit{The Abundance of Wild Hyperbolic Sets, and Non-smooth Stable Sets for Diffeomorphisms}. }, given that the Newhouse thickness of our sets, $\tau(K)\tau(J) \geq 1$ then $C_1 + C_2 = I_1 + I_2$. Note that   $I_1 = [\ell N^n, (\ell+1)N^n]$,  $I_2=[-\lambda, 0]$ if $\lambda>0$  and $I_2=[0,-\lambda]$ if $\lambda<0$.  we find that 
+$$
+I_1+ I_2 = [N^n\ell - \lambda, N^n(\ell+1)] \  (\lambda>0) \ \mbox{and} \ I_1+I_2 = [N^n\ell, N^n(\ell+1)-\lambda] (\lambda<0).
+$$
+Then from (2)
+$$t \in I_1+I_2.$$
+Therefore the affine copy of the cantor set $t + \lambda J$ has a non-empty intersection with $X$ and $J$ cannot be universal.
+
+\end{proof}
+
+It would be interesting to study those Cantor sets with Newhouse thickness zero. We do not  know what would happen. However, it seems like if we assume a weaker condition on $J$. 
+
+\medskip
+
+\noindent $(\ast):$ There exists $K$ such that $J+K = I_J+I_K$, where $I_J,I_K$ are the  smallest closed interval containing $J$ and $K$. 
+
+\medskip
+
+we  may be able to show that  $J$  cannot be  universal for dense $G_{\delta}$ sets. 
