@@ -1,14 +1,31 @@
 \chapter{Introduction}
+%%%%%Re write these sections
+%From the perspective of applied math, empirical results are almost always discrete observations yet the relationships that are observed are not necessarily quantized.  This means that as we infer mathematical relationships from discrete sets, there can often be a mismatch between our theoretical model, and the true relationships.  %This notion of embedded relationships is also a core area of study within pure mathematics.  
+%Whether observing a pattern and trying to generalize the relationship to a broader context, or deducing a relationship from a different set of assumptions, discrete patters are intrinsically embedded in our universe. In this thesis we look to examine patters within patters.  
 
-From the perspective of applied math, empirical results are almost always discrete observations yet the relationships that are observed are not necessarily quantized.  This means that as we infer mathematical relationships from discrete sets, there can often be a mismatch between our theoretical model, and the true relationships.  %This notion of embedded relationships is also a core area of study within pure mathematics.  
-Whether observing a pattern and trying to generalize the relationship to a broader context, or deducing a relationship from a different set of assumptions, discrete patters are intrinsically embedded in our universe. In this thesis we look to examine patters within patters.  
+%From dynamical systems, and iterated function systems (IFS), the set of invariant points is an important area of study.  For example a one dimensional fractal, the Cantor set, the uncountable collection of points in the Cantor set is also the set of invariant points under an IFS.  From this perspective we can see that Cantor sets are an important set to understand from dynamical systems and iterated functions.  
+There is a long standing conjecture from Paul Erd\"{o}s on universal sets.  Informally the conjecture states that there is no infinite set that is universal in the real number line.  This is a conjecture about which types of  patterns can exist within another sets of numbers.  Before we formally state the theorem, we first need to review a few definitions: affine copies, universality, and non-zero measure. 
 
-From dynamical systems, and iterated function systems (IFS), the set of invariant points is an important area of study.  For example a one dimensional fractal, the Cantor set, the uncountable collection of points in the Cantor set is also the set of invariant points under an IFS.  From this perspective we can see that Cantor sets are an important set to understand from dynamical systems and iterated functions.  
+\begin{definition}[Affine]
+    
+\end{definition}
 
-We take a moment to bring up a conjecture from Erd\"{o}s on universal sets. Informally the conjecture states that there is no infinite set that is universal in the real. More formally, let $E\subseteq \R$ be an infinite set of real numbers.  Prove that there is a set of real numbers $S$ of positive measure which does not contain an affine copy of $E$.  
+\begin{definition}[Affine copy]
+    An \underline{affine} copy of a set $A$ is a scaled and translated set $A'$ such that for some $\lambda\neq 0, \lambda \in \R$ and $t \in \R$,  $$A' = \{\lambda a + t : a \in A\}.$$
+\end{definition}
+In this instance, it is a scaled and then translated copy of the set and need not be a "shape".  This gives us some flexibility when addressing different sets.  This definition is used to define universal. 
+
+\begin{definition}[Universal]
+    A set $E$ is called \underline{universal} in $X$ if for every subset $S \subseteq X$, with positive measure, $\mu (S) > 0$, there exist an affine copy of $E$ such that $t+\lambda E \subseteq S,$ for some $\lambda \neq 0$ and $t \in \R$.  
+\end{definition}
+
+
+More formally, let $E\subseteq \R$ be an infinite set of real numbers.  Prove that there is a set of real numbers $S$ of positive measure which does not contain an affine copy of $E$.  
 
 In this paper we take this idea of universality and put it into a topological context.  We show that no cantor set is universal in the set of dense $G_\delta$ sets.  
 
+
+If it is countable then baire category works directly.  So we need to work with 
 %Indeed as we examine our world we often notice similarities we want to measure.  Using that same measure we want to look for consistency, and should we see something similar to our original observation we would expect a similar measure.  
 
 %However in mathematics (and life), the rules we construct often lack the subtly to account for nuances. Let us na\"{i}vely consider measurement.  Suppose we have a string and want to find out its length.  After pulling the string taught along a ruler, we might see it is a few centimeters long.  Then from this collection of tools we might say that we only need two points and a ruler to be able to describe length.  In reality we have only learned of distance.  
@@ -25,7 +42,7 @@ Key words:\begin{itemize}
     \item Self Similarity is more well defined
     \item Cantor Set
     \item $\R^n$ Fractals
-    \item Erd\"{o}s Proposed Conjecture with Measure Space assumptions
+    \item Erd\"{o}s Proposed Conjecture with Measure Space assumptions %add in this as motivation, and include Angel and ChunKit paper
     \item Theorem with Topological Assumptions.
     \item Open questions
 \end{itemize}
