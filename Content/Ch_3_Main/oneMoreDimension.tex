@@ -1,0 +1,35 @@
+Consider a compact set $J$ in $\R^d$. An affine copy of $J$ is $\R^2$ is the set 
+$$
+t+\delta O (J)
+$$
+where $t\in \R^d$, $\delta\ne 0$ and $O$ is an orthogonal transformation. We say that $J$ is universal is the collection of dense $G_{\delta}$ sets if any dense $G_{\delta}$ set contains an affine copy of $J$. 
+
+\begin{definition}[Projective Newhouse Thickness]
+    We define {\it projective Newhouse thickness} of $J$ to be 
+$$
+\tau_P(J) = \inf_{O\in O (n)} \tau(P_xO(J))
+$$
+where $P_x$ is the orthogonal projection to the $x$-axis. 
+\end{definition}
+
+\begin{theorem}Let $J \subset \R^d$ be a compact set such that it has a positive projective Newhouse thickness. Then $K$ is not universal in the set of dense $G_\delta$ set in $\R^2$.  
+\end{theorem}
+
+\begin{proof}  Suppose we have a compact set $J$ in $\R^d$ such that it has a positive projective Newhouse thickness.  By Theorem 1, there exists a dense $G_{\delta}$ set $G_1$ in ${\mathbb R}^1$ such that $G_1$ does not contain any  affine copy of $\proj_x O(J)$. Now, we consider 
+$$
+G = G_1\times G_1. 
+$$
+Then $G$ is a dense $G_{\delta}$ set in ${\mathbb R}^d$. We claim that there is no affine copy of $J$ in $G$. To justify the claim. Suppose $G$ contains an affine copy of $J$ such that $t+\delta J\subset G$.  Then we take projection and we obtain that
+$$
+\proj_x(t)+ \delta \proj_x (J) \subset G_1
+$$
+which is a contradiction. Hence, the claim is true and the proof is complete. 
+
+
+
+%From this projection we can construct a cantor set, $K$ such that $K$ is not fully contained in the gaps of $\proj_x J$ and  $\tau(\proj_x J)\tau(K)>1$.  Then from this cantor set $K$ we construct a dense $F_\sigma$ set $X$ such that 
+%$$X = \bigcup_{n\in \Z} \bigcup_{l \in \Z} N^n (K +l).$$
+
+%Then by our first theorem 
+
+\end{proof}
