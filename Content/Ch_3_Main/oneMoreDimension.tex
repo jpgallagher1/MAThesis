@@ -1,27 +1,44 @@
-Consider a compact set $J$ in $\R^d$. An affine copy of $J$ is $\R^2$ is the set 
+\section{Generalizing into Higher Dimensions}
+%higher dimension, affine copy will be different in a few ways: \lambda, can be an orthogonal transformation, or scalar, t can be a vector.
+
+Consider a compact set $J$ in $\R^d$. An affine copy of $J$ is $\R^d$ is the set 
 $$
 t+\delta O (J)
 $$
 where $t\in \R^d$, $\delta\ne 0$ and $O$ is an orthogonal transformation. We say that $J$ is universal is the collection of dense $G_{\delta}$ sets if any dense $G_{\delta}$ set contains an affine copy of $J$. 
-
+%Falconer and Yavicoli generalize newhouse thickness to higher dimension, but their definition of thickness in higher dimension has to have a path connected component.  
+\begin{theorem}
+    If $X\subset \R^d$ contains a path connected component, then $X$ is not universal in the set of dense $G_\delta$ sets of $\R^d$.  
+\end{theorem}
+\begin{proof}
+    Remove the plane $$\R^d \setminus \bigcup_{i=1}^d \bigcup_{r \in \Q} \{X_i = r \}.$$
+    Consider some affine copy of $X$ with a path $L$.  Then $X'$ will contain an affine copy of the path $L'$.  The projection of $L'$ onto the coordinate axises will be non-degenerate on some interval for at least one of the axises.  Call this the $i$-th axis.  This interval will contain a rational number $r$.  Therefore $L'$ will intersect with the coordinate plane, $X_i = r$ 
+    In other words this dense G-delta set omits at least one point and cannot contain affine copy of $X$.  
+\end{proof}
+ We can still consider sets that contain no connected component.  Cantor dust contains no connected component.  We introduce the notion of \textit{projective Newhouse Thickness}, and use it to generalize our one-dimensional results into $\R^d$.  
 \begin{definition}[Projective Newhouse Thickness]
     We define {\it projective Newhouse thickness} of $J$ to be 
 $$
-\tau_P(J) = \inf_{O\in O (n)} \tau(P_xO(J))
+\tau_P(J) = \inf_{O\in O (d)} \tau(P_xO(J))
 $$
-where $P_x$ is the orthogonal projection to the $x$-axis. 
+where $P_x$ is the orthogonal projection to the $x$-axis and $O(d)$ is the orthogonal group consisting of all orthogonal transformations in $R^d$.  
 \end{definition}
 
-\begin{theorem}Let $J \subset \R^d$ be a compact set such that it has a positive projective Newhouse thickness. Then $K$ is not universal in the set of dense $G_\delta$ set in $\R^2$.  
+We note that the projection some Cantor dust set maybe an interval.  If that is the case we say the Newhouse Thickness of the projection is equal to infinity.  
+
+%remark or compute projective newhouse thickness.  
+
+Using our one dimensional result, we can generalize 
+\begin{theorem}Let $J \subset \R^d$ be a compact set such that it has a positive projective Newhouse thickness. Then $J$ is not universal in the set of dense $G_\delta$ set in $\R^d$.  
 \end{theorem}
 
-\begin{proof}  Suppose we have a compact set $J$ in $\R^d$ such that it has a positive projective Newhouse thickness.  By Theorem 1, there exists a dense $G_{\delta}$ set $G_1$ in ${\mathbb R}^1$ such that $G_1$ does not contain any  affine copy of $\proj_x O(J)$. Now, we consider 
+\begin{proof}  Suppose we have a compact set $J$ in $\R^d$ such that it has a positive projective Newhouse thickness.  By Theorem 1, there exists a dense $G_{\delta}$ set $G_1$ in ${\mathbb R}^1$ such that $G_1$ does not contain any  affine copy of $P_x O(J)$. Now, we consider 
 $$
-G = G_1\times G_1. 
+G = G_1\underbrace{\times \dots \times}_\text{d-times} G_1. 
 $$
 Then $G$ is a dense $G_{\delta}$ set in ${\mathbb R}^d$. We claim that there is no affine copy of $J$ in $G$. To justify the claim. Suppose $G$ contains an affine copy of $J$ such that $t+\delta J\subset G$.  Then we take projection and we obtain that
 $$
-\proj_x(t)+ \delta \proj_x (J) \subset G_1
+P_x(t)+ \delta P_x (J) \subset G_1
 $$
 which is a contradiction. Hence, the claim is true and the proof is complete. 
 
