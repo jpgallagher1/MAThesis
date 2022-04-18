@@ -9,14 +9,20 @@ Cantor sets contain important invariant structures such as Hausdorff dimension, 
 \end{definition}
 
 Using these two notions we will define the \underline{bridge} of $C$ of Cantor set $K$.  
-\begin{definition}[bridge]
+\begin{definition}[bridge]\cite{palis&takens}
     Let $U$ be any bounded gap and $u$ be a boundary point of $U$.  Note that $u \in K$.  The \underline{bridge}    
 \end{definition}
 
-\begin{definition}[Newhouse Thickness]
+\begin{definition}[Newhouse Thickness]\cite{palis&takens}
     Let $K$ be some set 
     
 \end{definition}
+
+%include examples of calculating newhouse thickness
+%Cantor set Middle Third
+%N Digit
+%Comment on removing left interval doesn't work well.  Thin left interval versus Thick Right interval
+%Also note that all self-similar Cantor sets in \R^1 have positive newhouse thickness
 \section{The Gap Lemma}
 \begin{lemma}{The Gap Lemma}\cite{palis&takens}
     Let $K_1, K_2, \subset \R$ be Cantor sets with thickness $\tau_1$ and  $\tau_2$.  If $\tau_1 \cdot \tau_2 >1,$ then one of the following three alternatives occurs: $K_1$ is contained the gap of $K_2$; $K_2$ is contained in the gap of $K_1$; $K_1 \cap K_2 \neq \emptyset.$
@@ -32,6 +38,7 @@ First we will assume for the sake of contradiction that the opposite is true.  T
     \begin{claim}
         If $\tau_1\tau_2 > 1$ then from the interval $U_1$ (or for that matter $U_2$) we can construct another sub-interval $U_1'$ such that $l(U_1') < l(U_1)$ (or similarly $U_2'$ such that $l(U_2')<l(U_2)).$
     \end{claim}
+    %Proof of claim
     Notice that $(U_1',U_2)$ is still a gap-pair, as is $(U_1,U_2')$.
     
     Using this construction we can create a sequence of gap-pairs $(U_1^{(i)}, U_2^{(j)})$.  Notice that because it is a summable compact cantor set, the $U_1^{(i)}$ and $U_2^{(j)}$ are compact.  Moreover the sums of the lengths $$\sum_i^\infty l(U_1^{(i)}) < \infty,$$ and therefore $l((U_1^{(i)} \to 0$ as $i \to \infty$.   From this we construction we have a sequence of gap-pairs such that as $i \to \infty$, $l(U_1^{(i)}) \to 0$ and similarly as $j \to \infty$, $l(U_2^{(j)}) \to 0$.  
