@@ -1,7 +1,16 @@
 \section{Positive Newhouse Thickness}
+Cantor sets contain important invariant structures such as Hausdorff dimension, thickness, and denseness.  We will investigate thickness and denseness.  First we will define the gaps and bounded gaps of Cantor sets in order to construct and define Newhouse thickness. 
 \begin{definition}[Gap]
-    Let $K$ be some Cantor set with an outer hull $I$, and a sequence of 
-    
+    Let $K$ be some Cantor set.  A \underline{gap} of $K$ is a connected components of $\R \setminus K$.      
+\end{definition}  Informally, the gaps are the intervals surrounding the points of the Cantor set.  Some of the lengths of these intervals are bounded some are not.  In the example of the middle third Cantor set, the unbounded gaps would be $(-\infty, 0)$ and $(1, \infty)$.  
+
+\begin{definition}[Bounded Gap]
+    Let $K$ be a Cantor set.  A \underline{bounded gap} is a bounded connected component of $\R \setminus K$.      
+\end{definition}
+
+Using these two notions we will define the \underline{bridge} of $C$ of Cantor set $K$.  
+\begin{definition}[bridge]
+    Let $U$ be any bounded gap and $u$ be a boundary point of $U$.  Note that $u \in K$.  The \underline{bridge}    
 \end{definition}
 
 \begin{definition}[Newhouse Thickness]
@@ -16,11 +25,14 @@ First we will assume for the sake of contradiction that the opposite is true.  T
 \begin{proof}
     Let $K_1, K_2$ be two Cantor sets with thickness $\tau_1, \tau_2$ respectively and assume that $K_1$ is not contained in the gap of $K_2$ and $K_2$ is not contained in the gap of $K_1$.  
 
-    Assume that $K_1 \cap K_2 = \emptyset$.  Consider the gaps $U_1 \subset K_1^c$ and $U_2 \subset K_2^c$.  We call $(U_1, U_2)$ a gap-pair if $U_1$ contains exactly one boundary point of $U_2$ and $U_2$ contains exactly one point of $U_1$.  
+    Assume for the sake of contradiction that $K_1 \cap K_2 = \emptyset$.  Consider the bounded gaps $U_1 \subset K_1^c$ and $U_2 \subset K_2^c$.  We call $(U_1, U_2)$ a gap-pair if $U_1$ contains exactly one boundary point of $U_2$ and $U_2$ contains exactly one point of $U_1$.  
 
-    By assumption we know that $K_1, K_2$ are not contained in the other's gaps and therefore there exists some gap-pair $(U_1, U_2).$
+    By assumption we know that $K_1, K_2$ are not contained in the other's gaps. Therefore there exists some gap-pair $(U_1, U_2).$
 
-    From the interval $U_1$ (or for that matter $U_2$) we can construct another sub-interval $U_1'$ such that $l(U_1') < l(U_1)$ (or similarly $U_2'$ such that $l(U_2')<l(U_2)).$  Notice that $(U_1',U_2)$ is still a gap-pair, as is $(U_1,U_2')$.
+    \begin{claim}
+        If $\tau_1\tau_2 > 1$ then from the interval $U_1$ (or for that matter $U_2$) we can construct another sub-interval $U_1'$ such that $l(U_1') < l(U_1)$ (or similarly $U_2'$ such that $l(U_2')<l(U_2)).$
+    \end{claim}
+    Notice that $(U_1',U_2)$ is still a gap-pair, as is $(U_1,U_2')$.
     
     Using this construction we can create a sequence of gap-pairs $(U_1^{(i)}, U_2^{(j)})$.  Notice that because it is a summable compact cantor set, the $U_1^{(i)}$ and $U_2^{(j)}$ are compact.  Moreover the sums of the lengths $$\sum_i^\infty l(U_1^{(i)}) < \infty,$$ and therefore $l((U_1^{(i)} \to 0$ as $i \to \infty$.   From this we construction we have a sequence of gap-pairs such that as $i \to \infty$, $l(U_1^{(i)}) \to 0$ and similarly as $j \to \infty$, $l(U_2^{(j)}) \to 0$.  
     
