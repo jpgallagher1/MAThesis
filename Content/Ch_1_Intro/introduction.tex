@@ -4,11 +4,27 @@
 %Whether observing a pattern and trying to generalize the relationship to a broader context, or deducing a relationship from a different set of assumptions, discrete patters are intrinsically embedded in our universe. In this thesis we look to examine patters within patters.  
 
 %From dynamical systems, and iterated function systems (IFS), the set of invariant points is an important area of study.  For example a one dimensional fractal, the Cantor set, the uncountable collection of points in the Cantor set is also the set of invariant points under an IFS.  From this perspective we can see that Cantor sets are an important set to understand from dynamical systems and iterated functions.  
-There is a long standing conjecture from Paul Erd\"{o}s on universal sets.  Informally the conjecture states that there is no infinite set that is universal in the real number line.  This is a conjecture about which types of  patterns can exist within another sets of numbers.  Before we formally state the theorem, we first need to review a few definitions: affine copies, universality, and non-zero measure. 
 
-\begin{definition}[Affine]
-    
-\end{definition}
+Often in data work, one may ask, "Which patterns are possible to find, given a certain data set, or hypothetical relationship?"  Mathematically a similar problem can be proposed.  Which patterns, finite or infinite, exist within another collection of sets?  A set is called universal in another set, when every subset of the larger set contains some scaled and translated copy of original.  Paul Erdos proposed a conjecture that no infinite set, is universal in the the collection of sets with positive measure.  We will explore an analogous problem in a topological setting. Instead of sets with positive measure we investigate the collection of dense G-delta sets.  Any finite or countable set is found to be topologically universal.  Any set containing an interval cannot be topologically universal.  We also have the new result that any Cantor sets is not topologically universal.  Cantor sets, which contains no interval and are uncountably infinite, are not topologically universal in the collection of dense G-delta sets.  
+
+There is a long standing conjecture from Paul Erd\"{o}s on universal sets.  Informally the conjecture states that there is no infinite set that is universal in the real number line.  This is a conjecture about which types of  patterns can exist within another sets of numbers.  Before we formally state the theorem, we first need to review a few definitions: affine copies, universality, and non-zero measure. 
+    %Patterns in Data sets
+    %Def Affine Copy
+    %Def Measure-Universal
+    %State Erdos Conjecture
+    %History/Context for Erdos Conjecture, 
+        %Proposed Year
+        %Who are main researchers?
+        %What is current Progress?
+    %Def Topological-Universal
+    %Propose Analogous Theorem
+    %Outline Paper Sections ahead
+        %Measure ideas:
+        %Topology ideas:
+        %Gap Lemma
+        %Main Thm
+        %Multi-Dim Thm
+
 
 \begin{definition}[Affine copy]
     An \underline{affine} copy of a set $A$ is a scaled and translated set $A'$ such that for some $\lambda\neq 0, \lambda \in \R$ and $t \in \R$,  $$A' = \{\lambda a + t : a \in A\}.$$
@@ -20,7 +36,11 @@ In this instance, it is a scaled and then translated copy of the set and need no
 \end{definition}
 
 
-More formally, let $E\subseteq \R$ be an infinite set of real numbers.  Prove that there is a set of real numbers $S$ of positive measure which does not contain an affine copy of $E$.  
+More formally, we state this conjecture as follows. 
+
+\begin{conjecture}[The Erd\"{o}s Self-Similarity Conjecture]
+    Let $E\subseteq \R$ be an infinite set of real numbers.  Prove that there is a set of real numbers $S$ of positive measure which does not contain an affine copy of $E$.  
+\end{conjecture}
 
 In this paper we take this idea of universality and put it into a topological context.  We show that no cantor set is universal in the set of dense $G_\delta$ sets.  
 
@@ -34,23 +54,17 @@ If it is countable then baire category works directly.  So we need to work with
 
 %We can now go back to our notion of the universe and ask ourselves these questions again.  Suppose we change universes, does our notion of length still exist? In a different universe can we find similar copies of these collections of points? 
 
-Key words:\begin{itemize}
-    \item Dynamical Systems
-    \item Density and Measure are not clearly linked
-    \item Geometry
-    \item Fractals poorly defined
-    \item Self Similarity is more well defined
-    \item Cantor Set
-    \item $\R^n$ Fractals
-    \item Erd\"{o}s Proposed Conjecture with Measure Space assumptions %add in this as motivation, and include Angel and ChunKit paper
-    \item Theorem with Topological Assumptions.
-    \item Open questions
-\end{itemize}
-
-%\section{Introduction to the Introduction}
-
-
-
-%\subsection{Introduction to the Introduction to the Introduction}
+% Key words:\begin{itemize}
+%     \item Dynamical Systems
+%     \item Density and Measure are not clearly linked
+%     \item Geometry
+%     \item Fractals poorly defined
+%     \item Self Similarity is more well defined
+%     \item Cantor Set
+%     \item $\R^n$ Fractals
+%     \item Erd\"{o}s Proposed Conjecture with Measure Space assumptions %add in this as motivation, and include Angel and ChunKit paper
+%     \item Theorem with Topological Assumptions.
+%     \item Open questions
+% \end{itemize}
 
 
