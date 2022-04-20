@@ -5,9 +5,22 @@
 
 %From dynamical systems, and iterated function systems (IFS), the set of invariant points is an important area of study.  For example a one dimensional fractal, the Cantor set, the uncountable collection of points in the Cantor set is also the set of invariant points under an IFS.  From this perspective we can see that Cantor sets are an important set to understand from dynamical systems and iterated functions.  
 
-Often in data work, one may ask, "Which patterns are possible to find, given a certain data set, or hypothetical relationship?"  Mathematically a similar problem can be proposed.  Which patterns, finite or infinite, exist within another collection of sets?  A set is called universal in another set, when every subset of the larger set contains some scaled and translated copy of original.  Paul Erdos proposed a conjecture that no infinite set, is universal in the the collection of sets with positive measure.  We will explore an analogous problem in a topological setting. 
+Often in data work, one may ask, "Which patterns are possible to find, given a certain data set, or hypothetical relationship?"  Mathematically a similar problem can be proposed.  Which patterns, finite or infinite, exist within another collection of sets?  
 
-There is a long standing conjecture from Paul Erd\"{o}s on universal sets.  Informally the conjecture states that there is no infinite set that is universal in the real number line.  This is a conjecture about which types of  patterns can exist within another sets of numbers.  Before we formally state the theorem, we first need to review a few definitions: affine copies, universality, and non-zero measure. 
+If we more deeply consider patters which infinitely repeat scaled copies of itself, this turns out to be a self-similar set.  This is very closely related to the concept of fractals as well as a core area of study within dynamical systems.  Some fractals can be generated using recursive functions.  In dynamical systems some iterated functions may have sets of invariant points.  In this respect it is valuable to explore which patterns are found everywhere. 
+
+Given a specific set of points, we can formalize this notion of a scaled copy of a pattern as an affine transformation or affine copy.  
+\begin{definition}[Affine copy]
+    An \underline{affine} copy of a set $A$ is a scaled and translated set $A'$ such that for some $\lambda\neq 0, \lambda \in \R$ and $t \in \R$,  $$A' = \{\lambda a + t : a \in A\}.$$
+\end{definition}
+
+Exploring this notion a little more deeply, we can begin to investigate which patters appear everywhere.  Informally, a set is called universal in another set, when every subset of the larger set contains some scaled and translated copy of original.  In the context of a measurable set:
+
+\begin{definition}[Measure-Universal]
+    A set $E$ is called \underline{Measure-universal} in $X$ if for every subset $S \subseteq X$, with positive measure, $\mu (S) > 0$, there exist an affine copy of $E$ such that $t+\lambda E \subseteq S,$ for some $\lambda \neq 0$ and $t \in \R$.  
+\end{definition}
+  Paul Erdos proposed a conjecture (\ref{ErdConj}) that no infinite set, is universal in the the collection of sets with positive measure.  We will explore an analogous problem in a topological setting. 
+
     %Patterns in Data sets
     %Def Affine Copy
     %Def Measure-Universal
@@ -34,23 +47,6 @@ There is a long standing conjecture from Paul Erd\"{o}s on universal sets.  Info
         %Multi-Dim Thm
 
 
-\begin{definition}[Affine copy]
-    An \underline{affine} copy of a set $A$ is a scaled and translated set $A'$ such that for some $\lambda\neq 0, \lambda \in \R$ and $t \in \R$,  $$A' = \{\lambda a + t : a \in A\}.$$
-\end{definition}
-In this instance, it is a scaled and then translated copy of the set and need not be a "shape".  This gives us some flexibility when addressing different sets.  This definition is used to define universal. 
-
-\begin{definition}[Measure-Universal]
-    A set $E$ is called \underline{Measure-universal} in $X$ if for every subset $S \subseteq X$, with positive measure, $\mu (S) > 0$, there exist an affine copy of $E$ such that $t+\lambda E \subseteq S,$ for some $\lambda \neq 0$ and $t \in \R$.  
-\end{definition}
-
-
-More formally, we state this conjecture as follows. 
-
-\begin{conjecture}[The Erd\"{o}s Self-Similarity Conjecture]
-    Let $E\subseteq \R$ be an infinite set of real numbers.  Prove that there is a set of real numbers $S$ of positive measure which does not contain an affine copy of $E$.  
-\end{conjecture}
-
-In this paper we take this idea of universality and put it into a topological context.  We show that no cantor set is universal in the set of dense $G_\delta$ sets.  Instead of sets with positive measure we investigate the collection of dense G-delta sets.  Any finite or countable set is found to be topologically universal. 
 
 \begin{definition}[Topological-Universal]
     A set $E$ is called \underline{Topological-universal} in $X$ if for every subset $S \subseteq X$, with positive measure, $\mu (S) > 0$, there exist an affine copy of $E$ such that $t+\lambda E \subseteq S,$ for some $\lambda \neq 0$ and $t \in \R$.  
