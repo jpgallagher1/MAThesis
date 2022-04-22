@@ -17,14 +17,27 @@
         %Main Thm
         %Multi-Dim Thm
 
-One of the more popularly known results from math is the fractal known as hte Mandelbrot set.  In some senses fractals can be very general objects that are considered to have fractional dimensions.  This definition can be very general but by that same token, may not always capture some of the inherent geometry of some fractal objects. Some objects with fractional dimensions have self-similar properties, and some self-similar objects have fractional dimension.  For the scope of this paper, we will not be discussing dimension, and will instead investigate the notion of self-similarity. 
+One of the more popularly known results from math is the the Mandelbrot set fractal.  In some senses fractals can be very general objects that are considered to have fractional dimensions.  This definition can be very general but by that same token, may not always capture some of the inherent geometry of some fractal type objects. Some objects with fractional dimensions have a self-similar property, and some self-similar objects have fractional dimension.  For the scope of this paper, we will not be discussing dimension. However we will investigate the notion of self-similarity. 
 
-Recall the earlier definition of \textit{affine}.  
+We can now start by defining \textit{affine transformations} or \textit{affine copies}.
 \begin{definition}[Affine copy]
-    An \underline{affine} copy of a set $A$ is a scaled and translated set $A'$ such that for some $\lambda\neq 0, \lambda \in \R$ and $t \in \R$,  $$A' = \{\lambda a + t : a \in A\}.$$
+    An \underline{affine copy} of a set $A$ is a scaled and translated set $A'$ such that for some $\lambda\neq 0, \lambda \in \R$ and $t \in \R$,  $$A' = \{\lambda a + t : a \in A\}.$$
 \end{definition}
 
-Even one dimensional objects can have this self-similar property.  In a general sense, we can take a set and dilate and translate a copy of the set.  
+Even one dimensional objects can have this self-similar property. Take for example the middle Third Cantor set.  The middle third Cantor set is defined by recursively removing the open middle third interval of the previous remaining closed intervals.  Explicitly this can be constructed using countable intersection.  
+
+\begin{example}[The Middle Third Cantor Set]\label{middleThirdCantor}
+    $$\mathcal{C} = [0,1] \setminus \bigcup_{n=0}^\infty\bigcup_{k=0}^{3^n-1}\left(\frac{3k+1}{3^{n+1}},\frac{3k+2}{3^{n+1}}\right)$$
+\end{example}
+
+This set in particular exhibits this self-similar property because each level is a scaled copy of the entire object.  The following figure shows the first seven intervals removed.  
+
+\begin{figure}[h]
+    \includegraphics[width=0.8\textwidth]{Content/Images/Cantor_set_in_seven_iterations.jpg}
+    \centering
+    \caption{The first seven iterations of the middle third Cantor Set.}
+\end{figure}
+In a general sense, we can take a set, then dilate and translate a copy of it. 
 
 \begin{definition}[Dilation]
     Let $r>0$ and $a \in \R$.  The \underline{dilation} on $\R$ with ratio $r$ and center $a$ is the function $f: \R \to \R$ given by $$f(x)= rx + (1-r) a.$$
