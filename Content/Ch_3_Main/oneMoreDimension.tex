@@ -16,10 +16,10 @@ where $t\in \R^d$, $\delta\ne 0$ and $O$ is an orthogonal transformation. We say
     In other words this dense G-delta set omits at least one point and cannot contain affine copy of $X$.  
 \end{proof}
  We can still consider sets that contain no connected component.  Cantor dust contains no connected component.  We introduce the notion of \textit{projective Newhouse Thickness}, and use it to generalize our one-dimensional results into $\R^d$.  
-\begin{definition}[Projective Newhouse Thickness]
-    We define {\it projective Newhouse thickness} of $J$ to be 
+\begin{definition}[Positive Projective Newhouse Thickness]
+    We say a $J$ set has {\it positive projective Newhouse thickness} if for all $O \in O(d)$ 
 $$
-\tau_P(J) = \inf_{O\in O (d)} \tau(P_xO(J))
+ \tau(P_xO(J)) > 0
 $$
 where $P_x$ is the orthogonal projection to the $x$-axis and $O(d)$ is the orthogonal group consisting of all orthogonal transformations in $R^d$.  
 \end{definition}
@@ -29,10 +29,10 @@ We note that the projection some Cantor dust set maybe an interval.  If that is 
 %remark or compute projective newhouse thickness.  
 
 Using our one dimensional result, we can generalize 
-\begin{theorem}Let $J \subset \R^d$ be a compact set such that it has a positive projective Newhouse thickness. Then $J$ is not universal in the set of dense $G_\delta$ set in $\R^d$.  
+\begin{theorem}Let $J \subset \R^d$ be a compact set such that it has a positive projective Newhouse thickness. Then $J$ is not topologically-universal in $\R^d$.  
 \end{theorem}
 
-\begin{proof}  Suppose we have a compact set $J$ in $\R^d$ such that it has a positive projective Newhouse thickness.  By Theorem 1, there exists a dense $G_{\delta}$ set $G_1$ in ${\mathbb R}^1$ such that $G_1$ does not contain any  affine copy of $P_x O(J)$. Now, we consider 
+\begin{proof}  Suppose we have a compact set $J$ in $\R^d$ such that it has a positive projective Newhouse thickness.  By Theorem \ref{theorem_positive_NW}, there exists a dense $G_{\delta}$ set $G_1$ in ${\mathbb R}^1$ such that $G_1$ does not contain any  affine copy of $P_x O(J)$. Now, we consider 
 $$
 G = G_1\underbrace{\times \dots \times}_\text{d-times} G_1. 
 $$
