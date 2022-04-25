@@ -1,6 +1,13 @@
 \section{An Analogous Theorem in a Topological Setting}
 
+In a non-rigorous exploration of the real numberline, one might assume that patterns which appear everywhere should have positive measure.  However density and measure are not intrinsically linked.  Indeed it is possible to have uncountable dense sets with measure zero and to have sets with full measure that are nowhere dense.  
+
+Borrowing the conept of $G_\delta$ sets from topology, we can explore an extension of the Erd\H{o}s similarity problem.  Instead of exploring sets with positive measure we can explore dense $G_\delta$ sets.  This is the countable intersection of open sets that are also dense.  We will use these dense $G_\delta$ sets to define topological-universal. 
+
 \begin{definition}[Topological-Universal]
-    A set $E$ is called \underline{Topological-universal} in $X$ if for every subset $S \subseteq X$, with positive measure, $\mu (S) > 0$, there exist an affine copy of $E$ such that $t+\lambda E \subseteq S,$ for some $\lambda \neq 0$ and $t \in \R$.  
+    A set $E$ is called \underline{Topological-universal} in $X$ if for every dense $G_\delta$ subset $S \subseteq X$, there exist an affine copy of $E$ such that $t+\lambda E \subseteq S,$ for some $\lambda \neq 0$ and $t \in \R$.  
 \end{definition}
- Any set containing an interval cannot be topologically universal.  We also have the new result that any Cantor sets is not topologically universal.  Cantor sets, which contains no interval and are uncountably infinite, are not topologically universal in the collection of dense G-delta sets.  
+
+As stated above, an uncountable dense set can have measure zero.  Therefore any set containing an interval cannot be topologically universal.  We also have the new result that any Cantor sets is not topologically universal.  
+
+Cantor sets, which contains no interval and are uncountably infinite, are not topologically universal in the collection of dense G-delta sets.  

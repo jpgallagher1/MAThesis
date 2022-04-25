@@ -1,4 +1,4 @@
-\section{An Erd\H{o}s Self-Similarity Conjecture in Measure Space}
+\section{An Erd\H{o}s Self\hyphen{Similarity} Conjecture in Measure Space}
     %History/Context for Erdos Conjecture, 
         %Proposed Year (1974)
         %Who are main researchers? 
@@ -9,30 +9,30 @@
         %What is current Progress?
         %Falconer(slow decay sequence, ratio test), 
         %Kolountzakis using probabilistic arguments
-        %Bourgain: Faster decay sequences
         %2^{-n} is still an open question
-There is a long standing conjecture from Paul Erd\H{o}s on universal sets.  Informally the conjecture states that there is no infinite set that is universal in the real number line.  This is a conjecture about which types of  patterns can exist within another sets of numbers.  Before we formally state the theorem, we first need to review a few definitions: affine copies, universality, and non-zero measure. 
-\begin{definition}[Affine copy]
-    An \underline{affine} copy of a set $A$ is a scaled and translated set $A'$ such that for some $\lambda\neq 0, \lambda \in \R$ and $t \in \R$,  $$A' = \{\lambda a + t : a \in A\}.$$
-\end{definition}
-In this instance, it is a scaled and then translated copy of the set is still one dimensional and therefore need not be a ``shape".  This gives us some flexibility when addressing different sets.  This definition is used to define universal. 
+There is a long standing conjecture from Paul Erd\H{o}s on universal sets.  Informally the conjecture states that there is no infinite set that is universal in the real number line.  This is a conjecture about which types of  patterns can exist within another sets of numbers.  
 
-\begin{definition}[Measure-Universal]
-    A set $E$ is called \underline{Measure-universal} in $X$ if for every subset $S \subseteq X$, with positive measure, $\mu (S) > 0$, there exist an affine copy of $E$ such that $t+\lambda E \subseteq S,$ for some $\lambda \neq 0$ and $t \in \R$.  
+% In this instance, it is a scaled and then translated copy of the set is still one dimensional and therefore need not be a ``shape".  This gives us some flexibility when addressing different sets.  This definition is used to define universal. 
+
+\begin{definition}[Measure Universal]
+    A set $E$ is called \underline{measure universal} in $X$ if for every subset $S \subseteq X$, with positive measure, $\mu (S) > 0$, there exist an affine copy of $E$ such that $t+\lambda E \subseteq S,$ for some $\lambda \neq 0$ and $t \in \R$.  
 \end{definition}
 
 Now we can formally, state Erd\H{o}s' conjecture as follows. 
 
-\begin{conjecture}[The Erd\H{o}s Self-Similarity Conjecture]\label{ErdConj}
+\begin{conjecture}[The Erd\H{o}s Self\hyphen{Similarity} Conjecture]\label{ErdConj}
     Let $E\subseteq \R$ be an infinite set of real numbers.  Prove that there is a set of real numbers $S$ of positive measure which does not contain an affine copy of $E$.  
 \end{conjecture}
 
-Paul Erd\H{o}s first proposed this conjecture in 1974.  Originally the idea was first explored as part of 
+Paul Erd\H{o}s originally posed this question back in 1974 by building off of the work of Steinhaus.  Steinhaus\cite{Steinhaus} first posed that finite sets are universal in sets with positive measure.  After Erd\H{o}s build on this with his conjecture, there has been some progress.
 
-In this paper we take this idea of universality and put it into a topological context.  We show that no cantor set is universal in the set of dense $G_\delta$ sets.  Instead of sets with positive measure we investigate the collection of dense G-delta sets.  Any finite or countable set is found to be topologically universal. 
+Later Falconer \cite{Falconer} made substatioal progress by showing slowly decaying sequences are not universal.  Bourgain \cite{Bourgain} expanded on this by showing faster decaying sequences are also not universal.  In particular he demonstrated that the sumset of any three sets, cannot be universal.  Most recently Kolountzakis \cite{Kolo} demonstrated using probabilistic arguments to demonstrate that certain set with large gaps cannot be universal.  
 
 
-\begin{conjecture}
-    There is no infinite universal set. 
-\end{conjecture}
+In this paper we take this idea of universality and put it into a topological context.  We show in theorem \ref{theorem_positive_NW} no cantor set with positive Newhouse thickness is universal in the set of dense $G_\delta$ sets.
+
+
+% \begin{conjecture}
+%     There is no infinite universal set. 
+% \end{conjecture}
 

@@ -2,8 +2,9 @@
 
 First we want to begin with background definitions and theorems.  Erd\"{o}s' problem specifically deals with infinite set, and affine copies found in measurable set of sets.  In our problem, rather than dealing with measurable sets, we will instead use the set of dense $G_\delta$ sets.  
 
-Underpinning the nuances of this problem, measure theoretic size, and topological size, are not the same. From an intuitive sense of the number line one might think when you are scattered throughout an interval, you would have measure, except in special cases. Similarly one might think that if you have measure, then you would be scattered everywhere.  However both of these instances fail when you add in rigorous arguments.  Indeed it is possible to be a set that is no-where dense and have positive measure, as well as be dense and have zero measure. In other words topological size (density) is not the same thing as measure theoretic size. 
+Underpinning the nuances of this problem, measure theoretic size, and topological size, are not the same. From an intuitive sense of the number line one might think when you are scattered throughout an interval, you would have measure, except in special cases. Similarly one might think that if you have measure, then you would be scattered everywhere.  However both of these instances fail when you add in rigorous arguments.  Indeed it is possible to construct a set that is no-where dense and have positive measure.  It is also possible to construct an uncountable set that is be dense and has zero measure. In other words topological size (density) is not the same thing as measure theoretic size. 
 
+First we will review some measure theory.  In order to define \textit{measure} and \textit{measurable sets} we first need to define $\sigma$\hyphen{Algebra.   
 
 
 
@@ -15,6 +16,8 @@ Underpinning the nuances of this problem, measure theoretic size, and topologica
         \item If $E_1, E_2, \dots \in \Sigma$ is a sequence of subsets, then $\bigcup_{k=1}^\infty E_k \in \Sigma$. 
     \end{enumerate}
 \end{definition}
+
+In this instance we describe set of sets in terms of inersection and union.  This allows us to generate an algebraically closed colleciton of sets.  Now if we have a base definition of measure, we are also able to contruct our colleciton of sets, on which measure is defined.   
 
 \begin{definition}[Measure]
     Let $X$ be a set and $\Sigma$ be a $\sigma-$algebra over $X$.  A function $\mu: \Sigma \to \{\R \cup \infty\}$ is called a measure if it satisfies the following properties:
@@ -29,7 +32,7 @@ In this instance, a measurable set
 \begin{definition}[Measurable Set]
     Let $(X,\Sigma)$ be a measurable space.  A set $S\subseteq X$ is a \textit{measurable set} if and only if $S \in \Sigma$.
 \end{definition}
-Note that a non-measurable set is a set that is not in the $\sigma$-algebra.  This curiously leads to a result that non-measurable sets, also have non-zero measure because zero measure is a measure.  
+Note that a non-measurable set is a set that is not in the $\sigma$-algebra.  That is to say not all sets are necessarily measurable.  Nonmeasurable sets fall outside of our work.  
 
 % \begin{example}[The Vitali Set is not Lebesgue-measurable.]
 %     Consider the following equivalence relation on $\R$: 
@@ -55,13 +58,34 @@ Note that a non-measurable set is a set that is not in the $\sigma$-algebra.  Th
 %     \end{proof}
   
 % \end{example}
-
-What do we mean by topologically Large? Uncountable and dense.  Similarly what do we mean by measure theoretically large?  Non-zero measure.  It is helpful to define the opposite of topologically large, namely meager sets.
-
 %Define uncountable and dense 
+
+We will also need to define \textit{uncountable} and \textit{dense}.  First we start with \textit{countable}.
+
+\begin{definition}[Countable]
+    A set $X$ is called \textit{countable} if for some  subset $N \subset \N$, that is not necessarily finite, there exists a bijection $f: X \to N$.  
+\end{definition}
+
+\begin{definition}[Uncountable]
+    A set $X$ is called \textit{uncountable}, if it is not \textit{countable}.
+\end{definition}
+
+We also need to define \textit{dense}.  There are many equivalent definitions of dense.  We will use the following definition so that we can continue to develop the intuion around intervals and interiors. 
+
+\begin{definition}[dense]
+    A set $S$ is called dense in $X$ if for every $x \in X$, every neighborhood $U$ of $x$ intersects $A$.  
+\end{definition}
+
+
+In a similar fashion to the definitions of \textit{countable} and \textit{uncountable}, the oppsite of \textit{dense} is \textit{nowhere dense}.
 
 \begin{definition}[Nowhere Dense]  Let $X$ be a topological space.  A subset $B \subseteq X$ of a topological space is called \textit{nowhere dense} in $X$ if its closure has an empty interior.  That is to say, $B$ is \textit{nowhere dense} in $X$ if for each open set $U\subseteq X$, $B\cap U$ is not dense in $U$.      
 \end{definition}
+
+
+This allows us to now explore the differences between density and measure.  As stated earlier, topological size and measure theoretic size are not necessarily related.  What do we mean by topologically Large? Uncountable and dense.  Similarly what do we mean by measure theoretically large?  Non-zero measure.  After reviewing t It is helpful to define the opposite of topologically large, namely meager sets.
+
+
 
 \begin{definition}[Meager]  A subset $C \subseteq X$ of a topological space is called \textit{meager} in $X$ if it is the countable union of nowhere-dense subsets of $X$.    
 \end{definition}
