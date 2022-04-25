@@ -22,7 +22,7 @@ $$\tau(K_2) = \inf \left\{\frac{1}{N_2-1}, \frac{1}{N_4-1},\dots\right\} = 0.$$
 
 %The next steps are explorations on which conditions are sufficient, and which conditions are necessary.  
 
-We ask the following questions. Recall $I_J$ denotes the smallest closed interval containing the Cantor set $J$ and $O_J$ denotes  the largest open interval in $I_J\setminus J$. 
+We will conclude by ask the following questions. Recall $I_J$ denotes the smallest closed interval containing the Cantor set $J$ and $O_J$ denotes  the largest open interval in $I_J\setminus J$. 
 
 
 \begin{enumerate}
@@ -100,14 +100,25 @@ $$
 It also contains $t$ by (\ref{eq_t_choice}). The proof is now complete. 
 \end{proof}
 
+We now conclude with several open questions.
 
-************
+No Cantor set is topologically universal. 
 
-From these questions we have several difficulties associated with each.  For the first item it is not always clear which cantor sets can be added to each other.  Similarly it is difficult to construct a complementing Cantor set because of the difficulties tracking the notation for the different possible open intervals.  There maybe some existing tools. It may also just be messy. 
+For any cantor set, does there exist another such that $C_1 + C_2$ adds up to an interval?
 
-For the second point, our proof inherently relies on appropriately selecting a scalar and translation that corresponds to a regular (or fairly regular) Cantor set.  In this instance we have to find pick the appropriate $\lambda, t$ based off of a set of associated intervals that are not uniform.  Our proof relies on using the regularity to specify where the intersection is. 
+Rescaling condition?
 
-A current tool we are exploring is tracking how scaling and translating the collection of intervals $\{O_j\}_{j \in \N }$ by some appropriate bound $M$ such that we can scale our cantor set by $\frac{1}{M^d}$, and demonstrate an appropriate intersection with $X^c$.  
+If these two are true then we can settle this in one dimension.  
 
-The last question we discussed for the day focused on how scaling Cantor sets, and scaling intervals are interrelated.  With Newhouse thickness, because it relies off of the ratios of $\frac{I_j}{O_{j-1}}$ the scaling factor drops out.  Unfortunately if we are considering Cantor sets with Newhouse thickness $0$, then there is no corresponding Cantor set with infinite Newhouse thickness.  The issue is that from the theorem, the thickness is the product of the two sets so for any finite thickness $0\cdot \tau(C) = 0$.  Therefore Newhouse thickness will not be enough to describe the appropriate construction of the interval.  There are a few workarounds that might be possible.  In Astels' paper\cite{Astels} there is a generalized for for countably many cantor sets. Similarly we might be able to find another characterization (measure, dimension etc) of the set, to appropriately find $\lambda$ and or, another way to combine the two intervals, such that we have a non-empty intersection with $X^c$.  
+Finally we ask, 
+Do all self-similar sets have positive projective newhouse thickness?
+
+
+%From these questions we have several difficulties associated with each.  For the first item it is not always clear which cantor sets can be added to each other.  Similarly it is difficult to construct a complementing Cantor set because of the difficulties tracking the notation for the different possible open intervals.  There maybe some existing tools. It may also just be messy. 
+%
+%For the second point, our proof inherently relies on appropriately selecting a scalar and translation that corresponds to a regular (or fairly regular) Cantor set.  In this instance we have to find pick the appropriate $\lambda, t$ based off of a set of associated intervals that are not uniform.  Our proof relies on using the regularity to specify where the intersection is. 
+
+% A current tool we are exploring is tracking how scaling and translating the collection of intervals $\{O_j\}_{j \in \N }$ by some appropriate bound $M$ such that we can scale our cantor set by $\frac{1}{M^d}$, and demonstrate an appropriate intersection with $X^c$.  
+
+% The last question we discussed for the day focused on how scaling Cantor sets, and scaling intervals are interrelated.  With Newhouse thickness, because it relies off of the ratios of $\frac{I_j}{O_{j-1}}$ the scaling factor drops out.  Unfortunately if we are considering Cantor sets with Newhouse thickness $0$, then there is no corresponding Cantor set with infinite Newhouse thickness.  The issue is that from the theorem, the thickness is the product of the two sets so for any finite thickness $0\cdot \tau(C) = 0$.  Therefore Newhouse thickness will not be enough to describe the appropriate construction of the interval.  There are a few workarounds that might be possible.  In Astels' paper\cite{Astels} there is a generalized for for countably many cantor sets. Similarly we might be able to find another characterization (measure, dimension etc) of the set, to appropriately find $\lambda$ and or, another way to combine the two intervals, such that we have a non-empty intersection with $X^c$.  
 
