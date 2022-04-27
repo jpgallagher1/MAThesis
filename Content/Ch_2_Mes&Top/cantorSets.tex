@@ -4,6 +4,21 @@ We begin this section with a special $F_\sigma$ set.  The Cantor set is defined 
     The Cantor set $\mathcal{C}$, written as the successive removal of each middle third removed from the previous level is 
     $$\mathcal{C} = [0,1] \setminus \bigcup_{n=0}^\infty\bigcup_{k=0}^{3^n-1}\left(\frac{3k+1}{3^{n+1}},\frac{3k+2}{3^{n+1}}\right)$$
 \end{definition}
+
+As an $F_\sigma$ set defined on a closed interval with iteratively removed open intervals we see the middle third Cantor set can also be described with the following three properties.
+\begin{definition}[Cantor Set]
+    \textit{Cantor sets} are compact, perfect sets, and totally disconnected sets.      
+\end{definition}
+
+As a quick reminder to the defitions:
+\begin{definition}[Perfect]
+    A \textit{perfect} set is a closed set that contains no isolated points.
+\end{definition}
+\begin{definition}[Totally Disconnected]
+    A set is \textit{totally disconnected} if the only connected components are single points. 
+\end{definition}
+
+
 An equivalent formulation of the Cantor set, is the decimal expansion of all numbers in $[0,1]$ in base $3$, omitting any representation with a $1$. This can be a useful tool for thinking through some examples and counter-examples.
 \begin{example}[Decimal Expansion Cantor Set]
     $$\mathcal{C}  = \{ x \in [0,1]: \text{ $x$ has a ternary expansion containing no $1$'s.}\}$$
