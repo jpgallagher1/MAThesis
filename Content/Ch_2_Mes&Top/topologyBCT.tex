@@ -1,7 +1,5 @@
 \section{Topological and The Baire Category Theorem}
-
-
-We also need to define \textit{dense}.  There are many equivalent definitions of dense.  We will use the following definition so that we can continue to develop the intuion around intervals and interiors. 
+Now we will review some Topology that is relevant to our main theorem.  We need to define \textit{dense}.  From there we will build into $G_\delta$ sets.     There are many equivalent definitions of dense.  We will use the following definition so that we can continue to develop the intuion around intervals and interiors. 
 
 \begin{definition}[Dense]
     A set $S$ is called dense in $X$ if for every $x \in X$, every neighborhood $U$ of $x$ intersects $A$.  
@@ -21,13 +19,6 @@ This allows us to now explore the differences between density and measure.  As s
 
 \begin{definition}[Meager]  A subset $C \subseteq X$ of a topological space is called \textit{meager} in $X$ if it is the countable union of nowhere-dense subsets of $X$.    
 \end{definition}
-Now we look at our example.  
-\begin{example}A measure theoretically large set is not necessarily topologically large.
-
-Consider the interval $[0,1]$ and for all positive integers $a,n \in \N$ remove the intervals $(\frac{a}{2^n} - \frac{1}{2^{n+1}},\frac{a}{2^n} + \frac{1}{2^{n+1}})$.  Notice that the intervals are a geometric series and for each $n$ add up to at most $\frac{1}{2^{n+1}}$.  Therefore the set 
-$$[0,1] \setminus \bigcup_{a,n \in \N} \left(\frac{a}{2^n} - \frac{1}{2^{n+1}},\frac{a}{2^n} + \frac{1}{2^{n+1}}\right),$$
-is closed, has an empty interior, and is of positive measure.  
-\end{example}
 
 Next we will define dense $G_\delta$ sets, as well as some useful examples.  
 \begin{definition}[G-Delta Set]
@@ -47,10 +38,11 @@ Lastly we remark that there is an analogous set which is the countable union of 
 \end{definition}
 
 A key theorem that links analysis to set theory is the Baire Category Theorem.  This also establishes a link to understanding certain types of topological sets.  
-\begin{theorem}[Baire Category Theorem]\cite{Munkres}
+\begin{theorem}[Baire Category Theorem\cite{Munkres}]
     The countable intersection of open dense sets is dense.  
 \end{theorem}
 
 Within the study of measure theory it can sometimes be unclear if a set is dense in another set.  For example consider the following set: 
 $$\R^2 \setminus \{(x,y): y=mx + b, \text{where $m, b \in \Q$.}\}$$
-Notice that this can also be written as $$\bigcap_{m,b \in \Q} \R^2 \setminus \{(x,y): y=mx+b\}, $$ which is the plane, but removing all lines with rational coefficients, and rational intercepts.  
+Notice that this can also be written as $$\bigcap_{m,b \in \Q} \R^2 \setminus \{(x,y): y=mx+b\}, $$ which is the plane, but removing all lines with rational coefficients, and rational intercepts.  Each plane with one line removed, $\R^2 \setminus \{(x,y) : y=mx+b, \text{ for some } m,b \in \Q\}$ is an open dense set.  Then by the Baire Category Theorem, the countable intersection is dense.  Moreover this same idea holds for removing polynomials with rational coefficients.  We can write this as the countable intersection 
+$$\bigcap_{n\in \N}\bigcap_{a_k \in \Q}\R^2 \setminus \{(x,y): y = \sum_{k=0}^n a_kx^k\}.$$
