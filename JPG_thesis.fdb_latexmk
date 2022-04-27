@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber JPG_thesis"] 1651081273 "JPG_thesis.bcf" "JPG_thesis.bbl" "JPG_thesis" 1651081277
-  "JPG_thesis.bcf" 1651081277 108004 530deb71f5c81b1723a9c95155b41515 "pdflatex"
+["biber JPG_thesis"] 1651081273 "JPG_thesis.bcf" "JPG_thesis.bbl" "JPG_thesis" 1651081365
+  "JPG_thesis.bcf" 1651081364 108004 530deb71f5c81b1723a9c95155b41515 "pdflatex"
   "thesis.bib" 1651081271 4560 87c48443f3db84ffb5be326ff3d7c468 ""
   (generated)
   "JPG_thesis.bbl"
   "JPG_thesis.blg"
-["pdflatex"] 1651081276 "/Users/johngallagher/Documents/GitHub/MAThesis/JPG_thesis.tex" "JPG_thesis.pdf" "JPG_thesis" 1651081277
+["pdflatex"] 1651081364 "/Users/johngallagher/Documents/GitHub/MAThesis/JPG_thesis.tex" "JPG_thesis.pdf" "JPG_thesis" 1651081365
   "/Users/johngallagher/Documents/GitHub/MAThesis/JPG_thesis.tex" 1651077904 4245 e950af8d5761e85bd560baf8a867f2ff ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -129,7 +129,7 @@
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "Content/Ch_1_Intro/erdosSimilarity.tex" 1651079847 3283 00ed3ee8ff60e2eedf6554accf436564 ""
   "Content/Ch_1_Intro/introduction.tex" 1650845605 7228 4b56ea6d9e45d45f87dc793c965ed3d6 ""
-  "Content/Ch_1_Intro/thmStatement.tex" 1651080486 2415 e0a90f0dd265292ed6b5c4f3b0149469 ""
+  "Content/Ch_1_Intro/thmStatement.tex" 1651081362 2419 6066ba6d21b65b65e3463902bd4ca232 ""
   "Content/Ch_2_Mes&Top/affineCopies.tex" 1651079847 4794 2f7545bfd127f71ef6773849dfb14617 ""
   "Content/Ch_2_Mes&Top/cantorSets.tex" 1651079847 3674 29f9b883bc8629f947afc227227f60da ""
   "Content/Ch_2_Mes&Top/measure.tex" 1651081271 4011 db7bbf8c7fdcb187b74d2c44885b68bd ""
@@ -139,11 +139,11 @@
   "Content/Ch_3_Main/thicknessGapLemma.tex" 1651043621 4969 7efa1e10fcf7b616424e6e6b6d9dad43 ""
   "Content/Ch_4_Remarks_OpenQ/activeWorkingQuestions.tex" 1651043620 8861 1cfbbeef724ec58c536fa41b869dc6a7 ""
   "Content/Images/Cantor_set_in_seven_iterations.jpg" 1650845605 35452 594eeb44a8a395173499d7b4c745b229 ""
-  "JPG_thesis.aux" 1651081277 4041 7349063023f3ef9d08339510be4df904 "pdflatex"
+  "JPG_thesis.aux" 1651081364 4041 2f2a954d25c756b4b3bebca6fc2002e8 "pdflatex"
   "JPG_thesis.bbl" 1651081274 11079 889925f57219e8584e0bafbb2c807c30 "biber JPG_thesis"
-  "JPG_thesis.run.xml" 1651081277 2343 0bb8eda18e6a35fb8fccb121ee098094 "pdflatex"
+  "JPG_thesis.run.xml" 1651081364 2343 0bb8eda18e6a35fb8fccb121ee098094 "pdflatex"
   "JPG_thesis.tex" 1651077904 4245 e950af8d5761e85bd560baf8a867f2ff ""
-  "JPG_thesis.toc" 1651081277 1335 c176e0fd5aa15a8c017dff51db487044 "pdflatex"
+  "JPG_thesis.toc" 1651081364 1335 f7bf2ef01966bb1705fdd6a49c78fe78 "pdflatex"
   "MAThesisOutputFormat.sty" 1651080392 7643 7c88116e8fd1430995c4944976663130 ""
   "abstract.tex" 1650845605 1627 6796b52efc1959a104ecea1d676083c0 ""
   "acknowledgements.tex" 1650845605 2292 df9893e61f5bdef825042aebbff6ad8e ""
