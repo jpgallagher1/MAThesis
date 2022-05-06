@@ -46,12 +46,19 @@ Now we will check the construction of our Cantor sets such that each is not cont
 
 \end{proof}
 
+We also mention that this at least partially solves a quetsion posed by Svetic\cite{Svetic} in 2000, "Is it true that for every uncoutably infinite set, $E$, of real numbers, there exists $S \subset [0,1]$ of full measure that does not contain an affine copy of $E$?"  From earlier, any uncountable set that contains an interval is not topologically universal. 
+\begin{corollary}
+    Let $J$ be a cantor set.  Then there exists a set $S \subset [0,1]$ of full measure that does not contain an affine copy of $E$. 
+\end{corollary}
+\begin{proof}
+    Let $J$ be a Cantor set.  Then by theorem \ref{theorem_positive_NW}, there exists a dense $G_\delta$ that does not contain an affine copy of $J$.  
+
+    Finally by taking a countable disjoint union of translations of $\bigcup_k G_k$ we can construct a set of arbitraty size such that $\sum \ell(G_k) = 1.$ 
+\end{proof}
 %It would be interesting to study those Cantor sets with Newhouse thickness zero. We do not  know what would happen. However, it seems like if we assume a weaker condition on $J$. 
 
-\medskip
 
 %\noindent $(\ast):$ There exists $K$ such that $J+K = I_J+I_K$, where $I_J,I_K$ are the  smallest closed interval containing $J$ and $K$. 
 
-\medskip
 
 %we  may be able to show that  $J$  cannot be  universal for dense $G_{\delta}$ sets. 

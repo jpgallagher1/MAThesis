@@ -43,13 +43,58 @@ Beyond the middle third Cantor set, we can generalize these in a few different w
 %    Middle Third Cantor Set
 %\end{definition}
 
-Now we look at our example.  
+\begin{figure}
+    \begin{center}
+    
+\begin{tikzpicture}
+%\draw (-1,.5) -- (28, .5);
+% \draw [(-)](9,0) -- (18, 0);
+%\draw (-1,0) -- (28, 0);
+%\draw (-1,-.5) -- (28, -.5);
+%\draw (-1,-1) -- (28, -1);
+%\draw (-1,-1.5) -- (28, -1.5);
+\draw [line width = 1.5mm] (0,.5) -- (9, .5);
+\draw [decoration=Cantor set,line width =1.5mm] decorate{ (0,0) -- (9,0)};
+% \draw [(-)](9,0) -- (18, 0);
+\draw [decoration=Cantor set,line width =1.5mm] decorate{ decorate{ (0,-.5) -- (9,-.5) }};
+\draw [(-)](3,0) -- (6, 0);
+% \draw [(-)](21,-0.5) -- (24, -0.5);
+\draw [decoration=Cantor set,line width =1.5mm]decorate{ decorate{ decorate{ (0,-1) -- (9,-1) }}};
+\draw [(-)](1,-0.5) -- (2, -0.5);
+\draw [(-)](7,--0.5) -- (8, --0.5);
+% \draw [(-)](19,-1) -- (20, -1);
+% \draw [(-)](25,-1) -- (26, -1);
+\draw [decoration=Cantor set,line width =1.5mm] decorate{ decorate{ decorate{ decorate{ (0,-1.5) -- (9,-1.5) }}}};
+\draw [(-)](1/3,-1) -- (2/3, -1);
+\draw [(-)](7/3,-1) -- (8/3, -1);
+\draw [(-)](19/3,-1) -- (20/3, -1);
+\draw [(-)](25/3,-1) -- (26/3, -1);
+\end{tikzpicture}
+\end{center}
+\caption{The open middle intervals are recursively removed.  This removes the interior of the set, while still leaving the original set closed.  }
+    \label{fig:my_label}
+\end{figure}
+
+
 \begin{example}A measure theoretically large set is not necessarily topologically large.
-     $$\mathcal{C^*} = [0,1] \setminus \bigcup_{n=0}^\infty\bigcup_{k=0}^{2^n-1}\left(\frac{2k+1}{2^{n+1}},\frac{2k+2}{2^{n+1}}\right)$$
-The total length of each removed interval is the geometric series 
-$$\sum_{k=0}^\infty \frac{2^k}{2^{k+2}} = \frac{1}{4} + \frac{1}{8} + \dots = \frac{1}{2}.$$
-Therefore the set has Lebesgue measure $$\lambda^*(\mcC^*) = \ell([0,1]) - \frac{1}{2} = \frac{1}{2}.$$
+    The Smith-Volterra-Cantor set is formed in a similar manor to the middle-third Cantor set.  Starting with the closed interval, remove the middle fourth recursively.  At each level, $2^{n-1}$ intervals of length $1/4^n$ are removed.  The total length of these removed intervals are $$\sum_{n=0}^\infty \frac{2^n}{2^{2n+2}} = \frac{1}{2}.$$
+    Therefore the Smith-Volterra-Cantor set has measure $1 - 1/2 = 1/2.$
+    This closed set still has an empty interior and is therefore nowhere dense but still has positive measure. 
 %Consider the interval $[0,1]$ and for all positive integers $n \in \N$ remove the intervals $(\frac{1}{2^n} - \frac{1}{2^{n+1}},\frac{a}{2^n} + \frac{1}{2^{n+1}})$.  Notice that the intervals are a geometric series and for each $n$ add up to at most $\frac{1}{2^{n+1}}$.  Therefore the set 
 %$$[0,1] \setminus \bigcup_{a,n \in \N} \left(\frac{a}{2^n} - \frac{1}{2^{n+1}},\frac{a}{2^n} + \frac{1}{2^{n+1}}\right),$$
 %is closed, has an empty interior, and is of positive measure.  
 \end{example}
+
+\begin{example}[A dense, uncountable set of measure zero]
+As stated above, the middle third Cantor set has measure $0$.  Let $\mcC_q$ denote a cantor set translated by a rational number $q \in \Q$.  This gluing of sets is dense but still measure zero.  This is formed from closed sets. 
+$$\left\vert \bigcup_{q \in \Q} \mcC_q \right\vert \leq  \sum_{q \in \Q}\left\vert\mcC_q\right\vert = 0.$$
+\end{example}
+
+\begin{example}[A nowhere dense, uncountable set of positive measure.]
+    The Smith-Volterra-Cantor set is formed in a similar manor to the middle-third Cantor set.  Starting with the closed interval, remove the middle fourth recursively.  At each level, $2^{n-1}$ intervals of length $1/4^n$ are removed.  The total length of these removed intervals are $$\sum_{n=0}^\infty \frac{2^n}{2^{2n+2}} = \frac{1}{2}.$$
+    Therefore the Smith-Volterra-Cantor set has measure $1 - 1/2 = 1/2.$
+    \end{example}
+    
+    
+    
+    

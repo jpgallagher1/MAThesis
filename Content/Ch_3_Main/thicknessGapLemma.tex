@@ -40,8 +40,8 @@ We use this notion to define the \textit{Newhouse Thickness}.  Intuitively the t
 \begin{definition}[Newhouse Thickness \cite{palis&takens}]
     The \textit{Newhouse Thickness or thickness of $K$ at $u$} is defined as
     $$\tau(K, u) = \frac{\ell(C)}{\ell(U)}.$$
-    Moreover the thickness of the entire Cantor set is 
-    $$\tau(K) = \inf_{u\in K} \tau(K, u) = \inf.$$
+    Moreover for $\mathcal{U} = \{ \text{set of all boundary points of bounded gaps}\}$, the thickness of the entire Cantor set is 
+    $$\tau(K) = \inf_{u\in \mathcal{U}} \tau(K, u) = \inf_{u\in \mathcal{U}}\frac{\ell(C)}{\ell(U)}$$
 \end{definition}
 This helps us develop a language to talk about the relative sizes of Cantor sets that is slightly separated from the notion of measure.  Importantly it also helps us for a sufficient condition for our main theorem.
 
@@ -99,7 +99,7 @@ Here we will calculate a few examples of Newhouse Thickness.  Recall the middle 
     \end{tikzpicture}
 
     With this picture in mind lets take the infimum of the ratios.  The thickness of the $N$\hyphen{digit} expansion Cantor set is 
-    $$\tau(K) = \inf_{u\in K}\frac{\ell(C)}{\ell(U)} = \min\left\{\frac{j}{N},\frac{N-j-1}{N} \right\}$$
+    $$\tau(K) = \inf_{u\in K}\frac{\ell(C)}{\ell(U)} = \min\left\{j,N-j-1\right\}$$
 \end{example}  
 %include examples of calculating newhouse thickness
 %Cantor set Middle Third

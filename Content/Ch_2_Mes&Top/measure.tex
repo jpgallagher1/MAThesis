@@ -20,15 +20,24 @@ First we will review some measure theory.  In order to define \textit{measure} a
 
 In this instance we describe set of sets in terms of inersection and union.  This allows us to generate an algebraically closed colleciton of sets.  
 
-In the Erd\H{o}s conjecture, the measure is specifically referencing \textit{Lebesgue Measure}.
+In the Erd\H{o}s conjecture, the measure is specifically referencing \textit{Lebesgue Measure}.  First we define \textit{Lebesgue outer measure} which is defined on all sets. Then to define \textit{Lebesuge Measure} we will restrict the universe to the appropraite sigma algebra of measurable sets
 
-\begin{definition}[Lebesgue Measure\cite{Royden}]
+\begin{definition}[Lebesgue Outer Measure\cite{Axler}]
     For any interval $I = [a,b]$ (or $I = (a, b)$) in the set $\mathbb{R}$ of real numbers, let $\ell(I)= b - a$ denote its length. For any subset $E\subseteq\mathbb{R}$, the \textit{Lebesgue outer measure} $\lambda^*(E)$ is defined as an $\inf:$ 
     
     $$\lambda^*(E) = \inf \left\{\sum_{k=1}^\infty \ell(I_k) : {(I_k)_{k \in \mathbb N}} \text{ is a sequence of open intervals with } E\subset \bigcup_{k=1}^\infty I_k\right\}.$$
 \end{definition}
 
-The collection of sets where $\lambda^*(E)$ is defined forms a $\sigma$\hyphen{algebra}.  However not all sets are necessarily Lebesgue measurable, such as Vitali sets.  We will not explore non-measurable sets because it falls outside of the scope of our current theorems.
+Finally we define Lebesgue Measure. 
+\begin{definition}[Lebesgue Measure\cite{Stein&Shak}]
+    A subset $E\subset \R$ is \textit{Lebesgue measurable} if for any $\epsilon > 0$, there exists some open subset $\mathcal{O}\subset \R$ such that 
+    $E\subset \mathcal{O}$ and 
+    $$\lambda^*(E - \mathcal{O}) < \epsilon. $$
+    If $E$ is Lebesgue measurable then we define the \textit{Lebesgue measure} as 
+    $$\lambda(E) = \lambda^*(E).$$
+\end{definition}
+
+Notice that not all sets are necessarily Lebesgue measurable, such as Vitali sets.  We will not explore non-measurable sets because it falls outside of the scope of our current theorems.
 
 % Now if we have a base definition of measure, we are also able to contruct our colleciton of sets, on which measure is defined.   
 
@@ -40,18 +49,6 @@ The collection of sets where $\lambda^*(E)$ is defined forms a $\sigma$\hyphen{a
 %         \item \textbf{Countable Additivity} ($\sigma$-additivity): For all countable collections $\{E_k\}_{k=1}^\infty$ of pairwise disjoint sets in $\Sigma$, $$\mu\left( \bigcup_{k=1}^\infty E_k \right) = \sum_{k=1}^\infty \mu(E_k).$$
 %     \end{enumerate}
 % \end{definition}
-
-
-We will also need to define \textit{uncountable}.  This forms a key distinction for our sets
-
-\begin{definition}[Countable]
-    A set $X$ is called \textit{countable} if for some  subset $N \subset \N$, that is not necessarily finite, there exists a bijection $f: X \to N$.  
-\end{definition}
-
-\begin{definition}[Uncountable]
-    A set $X$ is called \textit{uncountable}, if it is not \textit{countable}.
-\end{definition}
-
 
 %measure big topological small
 %topologically big (dense g_delta), measure small 
