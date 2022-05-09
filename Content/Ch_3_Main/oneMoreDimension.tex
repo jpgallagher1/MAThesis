@@ -32,15 +32,25 @@ Using our one dimensional result, we can generalize
 \begin{theorem}Suppose $J \subset \R^d$ has positive projective Newhouse thickness. Then $J$ is not topologically-universal in $\R^d$.  
 \end{theorem}
 
-\begin{proof}  Suppose we have a set $J$ in $\R^d$ such that it has a positive projective Newhouse thickness.  By Theorem \ref{theorem_positive_NW}, there exists $G_n$, a dense $G_{\delta}$ set in ${\mathbb R}^1$ such that $G_n$ omits all affine copies of $P_x O(J)$. Now, we consider 
+\begin{proof}  Suppose we have a set $J$ in $\R^d$ such that it has a positive projective Newhouse thickness.  By Theorem \ref{theorem_positive_NW}, there exists $G_n$, a dense $G_{\delta}$ set in ${\mathbb R}^1$ such that $G_n$ omits all affine copies of all cantor set s$J_1$, with $$\tau(J_1) \geq \frac{1}{n}.$$
+    % $P_x O(J)$. 
+Now, from these $G_n$ we construct
 $$
-G = G_n\underbrace{\times \dots \times}_\text{d-times} G_n. 
+G = \bigcap_{n=1}^\infty G_n\underbrace{\times \dots \times}_\text{d-times}G_n. 
 $$
-Then $G$ is a dense $G_{\delta}$ set in ${\mathbb R}^d$. We claim that there is no affine copy of $J$ in $G$. To justify the claim. Suppose $G$ contains an affine copy of $J$ such that $t+\delta J\subset G$.  Then we take projection and we obtain that
-$$
-P_x(t)+ \delta P_x (J) \subset G_1
-$$
-which is a contradiction. Hence, the claim is true and the proof is complete. 
+Each $G_n\underbrace{\times \dots \times}_\text{d-times}G_n $ is a dense $G_\delta$ set and therefore $G$ is also a dense $G_\delta$ set.  
+
+Now all that remains is to prove that $G$ has no affine copy of $J$.  
+
+Assume to the contrarty that $G$ contains an affine copy of $J.$  Let $t+\lambda \mathcal{O}J$ be an affine copy of $J$.  Consider the positive projective thickness, $\tau(P_x(t + lambda \mathcal{O}J))> 0.$
+
+There exists some $n$ such that $\tau(P_x(t + lambda \mathcal{O}J))> \frac{1}{n},$ such that $G_n$ has no affine copy of $\mathcal{O}J$.  But if $t + \lambda \mathcal{O}J \subset G = \bigcap_{n=1}^\infty G_n \times \dots \times G_n,$ then $t_\lambda\mathcal{O}J \subset G_n \times \dots \times G_n$ imples that the projection $P_x(t + lambda \mathcal{O}J) \subset G_n$, which is a contradiction.  Therefore our assumption is false, and $G$ does not contain an affine copy of $J$.  
+ 
+% Then $G$ is a dense $G_{\delta}$ set in ${\mathbb R}^d$. We claim that there is no affine copy of $J$ in $G$. To justify the claim. Suppose $G$ contains an affine copy of $J$ such that $t+\delta J\subset G$.  Then we take projection and we obtain that
+% $$
+% P_x(t)+ \delta P_x (J) \subset G_1
+% $$
+% which is a contradiction. Hence, the claim is true and the proof is complete. 
 
 
 
