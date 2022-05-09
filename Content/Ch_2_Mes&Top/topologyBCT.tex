@@ -1,5 +1,5 @@
 \section{Topological and The Baire Category Theorem}
-Now we will review some Topology that is relevant to our main theorem.  We need to define \textit{dense}.  From there we will build into $G_\delta$ sets.     There are many equivalent definitions of dense.  We will use the following definition so that we can continue to develop the intution around intervals and interiors. 
+Now we will review some Topology that is relevant to our main theorem.  We need to define \textit{dense}.  From there we will build into $G_\delta$ sets.     There are many equivalent definitions of dense.  We will use the following definition so that we can continue to develop the intuition around intervals and interiors. 
 
 \begin{definition}[Dense]
     A set $S$ is called dense in $X$ if for every $x \in X$, every neighborhood $U$ of $x$ intersects $A$.  
@@ -49,9 +49,9 @@ $$\bigcap_{n\in \N}\bigcap_{a_k \in \Q}\R^2 \setminus \{(x,y): y = \sum_{k=0}^n 
 
 
 \begin{example}[A dense $\boldsymbol{G_\delta}$ set of measure zero.]
-     First consider an enumeration of the rationals $q_n.$  For each $\epsilon > 0$, let $I_\epsilon = \bigcup_{n=1}^\infty (q_n - \frac{\epsilon}{2^n}, q_n + \frac{\epsilon}{2^n})$.  Clearly $I_\epsilon$ is an open because of the union of open intervals and dense because of the rational numbers.  The Lebesgue measure of each set is at most $2\epsilon$.  Now consider $G = \bigcap_{k=1}^\infty I_{1/k}$.  By the Baire Category Theorem, this set is dense, but its measure is less than that of any $\vert I_{1/k} \vert = 2/k $, so it has measure zero.
+     First consider an enumeration of the rationals $q_n.$  For each $\epsilon > 0$, let $$I_\epsilon = \bigcup_{n=1}^\infty (q_n - \frac{\epsilon}{2^n}, q_n + \frac{\epsilon}{2^n}).$$  Clearly $I_\epsilon$ is an open because of the union of open intervals and dense because of the rational numbers.  The Lebesgue measure of each set is at most $2\epsilon$.  Now consider $$G = \bigcap_{k=1}^\infty I_{1/k}.$$  By the Baire Category Theorem, this set is dense, but its measure is less than that of any $\vert I_{1/k} \vert = 2/k $, so it has measure zero.
 \end{example}
 
-Finally we remark that any countable set is topologically universal.  By the baire category theorem, we can take a sequence of numbers from the dense $G_\delta$ set and multiply every element of the countable set, by that collection.  This parses the countable set into the $G_\delta$ set. 
+Finally we remark that any countable set is topologically universal.  By the Baire category theorem, we can take a sequence of numbers from the dense $G_\delta$ set and multiply every element of the countable set, by that collection.  This parses the countable set into the $G_\delta$ set. 
     
 We also remark that any set that contains an interval is not topologically universal.  A set that contains an interval has an interior.  However a there is a dense $G_\delta$ set that has zero measure and therefore contains no intervals. 

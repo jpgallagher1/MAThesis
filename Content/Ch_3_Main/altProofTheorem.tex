@@ -1,7 +1,6 @@
 \section{A Cantor set with positive Newhouse Thickness is not Topologically Universal}
 
-Recall the definition, 
-We  say that a set $E$ is  {\it topologically universal} in the collection of dense $G_{\delta}$ sets if for all $G_{\delta}$ set,  we can  always find some affine copies of $E$ inside the set. By an affine copy, we  mean sets of  the form $t+\lambda E$ for some $t\in{\mathbb R}$ and $\lambda\ne 0$. A natural question we have is that  is there a nowhere dense Cantor Set that is universal in the collection of dense $G_\delta$ sets? This is an exploration of an Erd\H{o}s conjecture in a topological setting. 
+Recall the definition, we  say that a set $E$ is  {\it topologically universal} in the collection of dense $G_{\delta}$ sets if for all $G_{\delta}$ set,  we can  always find some affine copies of $E$ inside the set. By an affine copy, we  mean sets of  the form $t+\lambda E$ for some $t\in{\mathbb R}$ and $\lambda\ne 0$. A natural question we have is that  is there a nowhere dense Cantor Set that is universal in the collection of dense $G_\delta$ sets? We are now ready to prove our main theorem in the introduction. 
 
 \begin{theorem}\label{theorem_positive_NW}
 Let $J$ be a cantor set with positive Newhouse thickness.  Then $J$ is not topologically universal in the collection of dense $G_\delta$ sets.
@@ -48,12 +47,12 @@ Now we will check the construction of our Cantor sets such that each is not cont
 
 \end{proof}
 
-We also mention that this at least partially solves a quetsion posed by Svetic\cite{Svetic} in 2000, "Is it true that for every uncoutably infinite set, $E$, of real numbers, there exists $S \subset [0,1]$ of full measure that does not contain an affine copy of $E$?"  From earlier, any uncountable set that contains an interval is not topologically universal. 
+We also mention that this partially solves a question posed by Svetic\cite{Svetic} in 2000, "Is it true that for every uncountably infinite set, $E$, of real numbers, there exists $S \subset [0,1]$ of full measure that does not contain an affine copy of $E$?"  From earlier, any uncountable set that contains an interval is not topologically universal. We now solve his question for Cantor set with positive Newhouse thickness. 
 \begin{theorem}
     Let $E$ be a Cantor set with positive Newhouse thickness.  Then there exists a set of full measure in $[0,1]$ that does not contain an affine copy of $E$. 
 \end{theorem}
 \begin{proof}
-    Let $E$ be a Cantor set. Consider the $G_{\delta}$ set we constructed in the theorem \ref{theorem_positive_NW} and intersect with it $[0,1]$.  By construction, it does not contain an affine copy of $E$.   Note that the complement of the $G_\delta$ set, (equation \ref{cantorCompliment}), has Lebesgue measure zero, by countable subadditivity of Lebesgue meausure.  Therefore $G_\delta \cap [0,1]$ has full measure.
+    Let $E$ be a Cantor set of positive Newhouse thickness. Consider the $G_{\delta}$ set we constructed in the theorem \ref{theorem_positive_NW} and intersect it with the interval $[0,1]$.  By construction, the intersection does not contain an affine copy of $E$.   Note that the complement of the $G_\delta$ set defined in (\ref{cantorCompliment}) is a countable union of scaled copies of Cantor sets of Lebesgue measure zero. Hence, it has Lebesgue measure zero, by the countable subadditivity of Lebesgue measure.  Therefore the dense $G_{\delta}$ set  has full measure and it did not contain any affine copies of $E$.
 \end{proof}
 %It would be interesting to study those Cantor sets with Newhouse thickness zero. We do not  know what would happen. However, it seems like if we assume a weaker condition on $J$. 
 
