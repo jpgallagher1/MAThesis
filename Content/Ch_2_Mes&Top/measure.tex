@@ -28,17 +28,21 @@ In the Erd\H{o}s conjecture, the measure is specifically referencing \textit{Leb
     $$\lambda^*(E) = \inf \left\{\sum_{k=1}^\infty \ell(I_k) : {(I_k)_{k \in \mathbb N}} \text{ is a sequence of open intervals with } E\subset \bigcup_{k=1}^\infty I_k\right\}.$$
 \end{definition}
 
-Finally we define Lebesgue Measure. 
-\begin{definition}[Lebesgue Measurable sets \cite{Stein&Shak}]
+Finally we define Lebbesgue measurable sets, and Lebesgue measure.  
+\begin{definition}[Lebesgue Measurable Sets \cite{Stein&Shak}]
     A subset $E\subset \R$ is \textit{Lebesgue measurable} if for any $\epsilon > 0$, there exists some open subset $\mathcal{O}\subset \R$ such that 
     $E\subset \mathcal{O}$ and 
     $$\lambda^*(E - \mathcal{O}) < \epsilon. $$
-    The collection of all Lebesgue measurable sets form a $\sigma$-algebra of ${\mathbb R}$. The Lebesgue measure is the outer measurable defined on this $\sigma$-algebra. i.e.
+    The collection of all Lebesgue measurable sets form a $\sigma$-algebra of ${\mathbb R}$. 
+\end{definition}
+\begin{definition}[Lebesgue Measure\cite{Stein&Shak}]
+    The Lebesgue measure is the outer measurable defined on the $\sigma$-algebra from the Lebesgue measurable sets. That is to say:
     If $E$ is Lebesgue measurable then we define the \textit{Lebesgue measure} as 
     $$\lambda(E) = \lambda^*(E).$$
 \end{definition}
 
-Notice that not all sets are necessarily Lebesgue measurable, such as Vitali sets.  We will not explore non-measurable sets because it falls outside of the scope of our current theorems.
+Notice that not all sets are necessarily Lebesgue measurable, such as Vitali sets.  We do however make one conjecture in chapter 4 noting that all measurable sets with positive measure contain a non-measurable set.  
+
 
 % Now if we have a base definition of measure, we are also able to contruct our colleciton of sets, on which measure is defined.   
 
