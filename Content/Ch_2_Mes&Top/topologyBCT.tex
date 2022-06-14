@@ -2,11 +2,10 @@
 Now we will review some Topology that is relevant to our main theorem.  We need to define \textit{dense}.  From there we will build into $G_\delta$ sets.     There are many equivalent definitions of dense.  We will use the following definition so that we can continue to develop the intuition around intervals and interiors. 
 
 \begin{definition}[Dense]
-    A set $S$ is called dense in $X$ if for every $x \in X$, every neighborhood $U$ of $x$ intersects $A$.  
+    A set $S$ is called dense in $X$ if for every $x \in X$, every neighborhood $U$ of $x$ intersects $S$.  
 \end{definition}
 
-
-In a similar fashion to the definitions of \textit{countable} and \textit{uncountable}, the opposite of \textit{dense} is \textit{nowhere dense}.
+The other side opposite of dense is nowhere dense.
 
 \begin{definition}[Nowhere Dense]  Let $X$ be a topological space.  A subset $B \subseteq X$ of a topological space is called \textit{nowhere dense} in $X$ if its closure has an empty interior.  That is to say, $B$ is \textit{nowhere dense} in $X$ if for each open set $U\subseteq X$, $B\cap U$ is not dense in $U$.      
 \end{definition}
@@ -17,7 +16,7 @@ This allows us to now explore the differences between density and measure.  As s
 
 
 
-\begin{definition}[Meager]  A subset $C \subseteq X$ of a topological space is called \textit{meager} in $X$ if it is the countable union of nowhere-dense subsets of $X$.    
+\begin{definition}[Meager]  A subset of a topological space $X$ is called \textit{meager} in $X$ if it is a countable union of nowhere-dense subsets of $X$.    
 \end{definition}
 
 Next we will define dense $G_\delta$ sets, as well as some useful examples.  
@@ -34,24 +33,24 @@ Notice that each $\R\setminus \{q\} = (-\infty, q) \cup (q, \infty)$ is an open 
 
 Lastly we remark that there is an analogous set which is the countable union of closed sets.
 \begin{definition}[F$_\sigma$ Set]
-    An $F_\sigma$ set is the countable union of closed sets.  This is equivalent to the compliment of a $G_\delta$ set is an $F_\sigma$ set.    
+    An $F_\sigma$ set is the countable union of closed sets.  This is equivalent to the compliment of a $G_\delta$.  
 \end{definition}
 
 A key theorem that links analysis to set theory is the Baire Category Theorem.  This also establishes a link to understanding certain types of topological sets.  
 \begin{theorem}[Baire Category Theorem\cite{Munkres}]
-    Let $X$ be a complete space.  Then any countable intersection of open dense sets is dense.  
+    Let $X$ be a complete space.  Then any countable intersection of open dense sets in $X$ is dense.  
 \end{theorem}
 
 Within the study of measure theory it can sometimes be unclear if a set is dense in another set.  For example consider the following set: 
-$$\R^2 \setminus \{(x,y): y=mx + b, \text{where $m, b \in \Q$.}\}$$
+$$\R^2 \setminus \bigcup_{m,b \in \Q} \{(x,y): y=mx + b\}.$$
 Notice that this can also be written as $$\bigcap_{m,b \in \Q} \R^2 \setminus \{(x,y): y=mx+b\}, $$ which is the plane, but removing all lines with rational coefficients, and rational intercepts.  Each plane with one line removed, $\R^2 \setminus \{(x,y) : y=mx+b, \text{ for some } m,b \in \Q\}$ is an open dense set.  Then by the Baire Category Theorem, the countable intersection is dense.  Moreover this same idea holds for removing polynomials with rational coefficients.  We can write this as the countable intersection 
 $$\bigcap_{n\in \N}\bigcap_{a_k \in \Q}\R^2 \setminus \{(x,y): y = \sum_{k=0}^n a_kx^k\}.$$
 
 
 \begin{example}[A dense $\boldsymbol{G_\delta}$ set of measure zero.]
-     First consider an enumeration of the rationals $q_n.$  For each $\epsilon > 0$, let $$I_\epsilon = \bigcup_{n=1}^\infty (q_n - \frac{\epsilon}{2^n}, q_n + \frac{\epsilon}{2^n}).$$  Clearly $I_\epsilon$ is open because it is the union of open intervals and it is dense because of the rational numbers.  The Lebesgue measure of each set is at most $2\epsilon$.  Now consider $$G = \bigcap_{k=1}^\infty I_{1/k}.$$  By the Baire Category Theorem, this set is dense, but its measure is less than that of any $\vert I_{1/k} \vert = 2/k $, so it has measure zero.
+     First consider an enumeration of the rationals $q_n.$  For each $\epsilon > 0$, let $$I_\epsilon = \bigcup_{n=1}^\infty (q_n - \frac{\epsilon}{2^n}, q_n + \frac{\epsilon}{2^n}).$$  Clearly $I_\epsilon$ is open because of it is the union of open intervals and it is dense because the rational numbers $\Q \subseteq I_\epsilon$ and $\Q$ is dense in $R$.  The Lebesgue measure of each set is at most $2\epsilon$.  Now consider $$G = \bigcap_{k=1}^\infty I_{1/k}.$$  By the Baire Category Theorem, this set is dense, but its measure is less than that of any $\vert I_{1/k} \vert = 2/k $, so it has measure zero.
 \end{example}
 
-Finally we remark that any countable set is topologically universal.  By the Baire category theorem, we can take a sequence of numbers from the dense $G_\delta$ set and multiply every element of the countable set, by that collection.  This parses the countable set into the $G_\delta$ set. 
+Finally we remark that any countable set is topologically universal.  By the Baire category theorem, we can take any sequence of numbers from the dense $G_\delta$ set and multiply every element of the countable set, by that collection.  This parses an affine copy of the countable set into the $G_\delta$ set. 
     
-We also remark that any set that contains an interval is not topologically universal.  A set that contains an interval has an interior.  However a there is a dense $G_\delta$ set that has zero measure and therefore contains no intervals. 
+We also remark that any set that contains an interval is not topologically universal.  A set that contains an interval has an interior.  However there is a dense $G_\delta$ set that has zero measure and therefore contains no intervals. 

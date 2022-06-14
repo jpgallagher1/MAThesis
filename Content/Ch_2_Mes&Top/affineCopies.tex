@@ -1,6 +1,6 @@
 \section{Affine Copies and the Self Similarity Property}
 
-One of the more popularly known results from math is the the Mandelbrot set fractal.  In some senses fractals can be very general objects that are considered to have fractional dimensions.  This definition can be very general but by that same token, may not always capture some of the inherent geometry of some fractal type objects. Some objects with fractional dimensions have a self-similar property, and some self-similar objects have fractional dimension.  For the scope of this paper, we will not be discussing dimension. However we will investigate the notion of self-similarity. 
+One of the more popularly known results from math is fractals, particularly the the Mandelbrot set.  In some senses fractals can be very general objects that are considered to have fractional dimensions.  This definition can be very general but by that same token, may not always capture some of the inherent geometry of some fractal type objects. Some objects with fractional dimensions have a self-similar property, and some self-similar objects have fractional dimension.  For the scope of this paper, we will not be discussing dimension. However we will investigate the notion of self-similarity. 
 
 
 Even one dimensional objects can have this self-similar property. Take for example the middle Third Cantor set.  The middle third Cantor set is defined by recursively removing the open middle third interval of the previous remaining closed intervals.  Explicitly this can be constructed using countable intersection.  
@@ -9,7 +9,7 @@ Even one dimensional objects can have this self-similar property. Take for examp
     $$\mathcal{C} = [0,1] \setminus \bigcup_{n=0}^\infty\bigcup_{k=0}^{3^n-1}\left(\frac{3k+1}{3^{n+1}},\frac{3k+2}{3^{n+1}}\right)$$
 \end{example}
 
-This set in particular exhibits this self-similar property because each level is a scaled copy of the entire object.  The following figure shows the first seven intervals removed.  
+This set in particular exhibits this self-similar property because each layer is a scaled copy of the entire object.  The following figure shows the first seven intervals removed.  
 
 \begin{figure}[h]
     \includegraphics[width=0.8\textwidth]{Content/Images/Cantor_set_in_seven_iterations.jpg}
@@ -50,7 +50,7 @@ Cantor sets are self-similar.  In a general sense, a set that is expressible in 
 From here we take a finite set of contractions $\{f_1, \dots, f_n\}.$    
 
 \begin{definition}[Iterated Function System\cite{Falconer}]
-    An iterated function system is a finite set of contraction mappings on a complete metric space, $X$.  Symbolically, we write this as, for some $N \in \N$,
+    An iterated function system is a finite set of contraction mappings in a complete metric space, $X$.  Symbolically, we write this as, for some $N \in \N$,
     $$\{f_i:X \to X \vert i = 1,2,\dots, N\}, $$
 \end{definition}
 
@@ -63,5 +63,5 @@ We conclude this section with the Cantor middle third set.
     The Cantor set is self-similar.  Consider the closed interval $[0,1]$.  Now we consider the following two contractions, each with the contraction ratio 1/3: 
     $$f_1 (x) = \frac{1}{3}x \quad \text{ and } \quad f_2 (x) = \frac{x+2}{3}.$$
 
-    Each level of the cantor set is another iteration of these two functions.  In this case the two functions are the iterated function system and the set of invariant points is the Cantor set.  
+    Each level of the Cantor set is another iteration of these two functions.  In this case the two functions are the iterated function system and the set of invariant points is the Cantor set.  
 \end{example}

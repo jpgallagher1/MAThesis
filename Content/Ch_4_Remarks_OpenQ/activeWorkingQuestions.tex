@@ -2,7 +2,7 @@ Finally we conclude by reviewing a few remarks and positing a few more questions
 
 \section{Zero Newhouse Thickness} 
 %Here are a few notes from today's meeting.  In particular we are now exploring adjacent problems, and trying to understand more properties of our construction, and which portions of our theorem are sufficient, necessary, and unnecessary.  
-Can a Cantor sets with zero Newhouse thickness can be universal? We first  provide an example for  which two Cantor sets with zero Newhouse thickness can still have arithmetic sum equal  to an interval,  showing that the converse of the Newhouse thickness theorem is  not true.   %is one example where we construct two appropriate cantor set with zero Newhouse thickness that combine to create an interval. 
+Can Cantor set with zero Newhouse thickness be universal? We first  provide an example for  which two Cantor sets with zero Newhouse thickness can be a direct sum to an interval,  showing that the converse of the Newhouse thickness theorem is  not true.   %is one example where we construct two appropriate cantor set with zero Newhouse thickness that combine to create an interval. 
 %One question we have about Newhouse Thickness: Can we repeat the same process as above but with Newhouse Thickness $0$?  That is to say, positive Newhouse thickness is sufficient condition for our theorem.  As a refinement, what are the necessary conditions for a Cantor set to not be universal? 
 \begin{example}
 {\rm Let $N_1, N_2, \dots \in \N_{\geq 2}$. Consider the following construction of a Cantor set using a decomposition of the unit intervals. }
@@ -10,34 +10,36 @@ $$\begin{aligned}
     \relax[0,1] = &\frac{1}{N_1}\{0,1, \dots, N_1-1\} + \left[0,\frac{1}{N_1}\right]\\
     = & \frac{1}{N_1}\{0,1, \dots, N_1-1\} + \frac{1}{N_1 N_2}\{0,1, \dots, N_2-1\} + \left[0,\frac{1}{N_1 N_2}\right]\\
     =&...\\
-    =&\frac{1}{N_1}\{0,1, \dots, N_1-1\} +  \frac{1}{N_1 N_2}\{0,1, \dots, N_2-1\} + \dots + \frac{1}{N_1 \cdots N_n} \{0,\dots, N_n \}+ \dots
+    =&\frac{1}{N_1}\{0, \dots, N_1-1\} +  \frac{1}{N_1 N_2}\{0, \dots, N_2-1\} + \\
+    &\quad \quad \quad \quad \quad \quad \quad \quad \quad \quad 
+    \dots + \frac{1}{N_1 \cdots N_n} \{0,\dots, N_n \}+ \dots
 \end{aligned}$$
-{\rm From here we can define the two cantor sets $K_1, K_2$ where $K_1$ constitutes the odd indices sets in the above summands and $K_2$ has the even one.   This gives the following constructions for the two Cantor sets: }
+{\rm From here we can define the two cantor sets $K_1, K_2$ where $K_1$ constitutes the odd $i$ indices in $N_i$ and $K_2$ has the even indices.   This gives the following constructions for the two Cantor sets: }
 $$K_1 = \frac{1}{N_1}\{0,1, \dots, N_1-1\}  + \dots + \frac{1}{N_1 \cdots N_{2n+1}} \{0,\dots, N_{2n+1}-1 \}+ \dots$$
 $$K_2 = \frac{1}{N_1N_2}\{0,1, \dots, N_2-1\}  + \dots +\frac{1}{N_1 \cdots N_{2n}} \{0,\dots, N_{2n}-1 \}+ \dots$$
-{\rm From this construction we see that $K_1 + K_2 = [0,1]$ is the interval but from the definition of Newhouse thickness, }
+{\rm From this construction we see that $K_1 + K_2 = [0,1]$ is the interval but from the definition of Newhouse thickness, if we have $\lim_{n\to\infty} N_n = \infty$}
 $$\tau(K_1) = \inf \left\{\frac{1}{N_1-1}, \frac{1}{N_3-1},\dots\right\} = 0 $$
 $$\tau(K_2) = \inf \left\{\frac{1}{N_2-1}, \frac{1}{N_4-1},\dots\right\} = 0.$$
-{\rm Therefore we have created an interval from two sets with Newhouse thickness $0$ if we have $\lim_{n\to\infty} N_n = \infty$. }
+{\rm Therefore we have created an interval from two sets with Newhouse thickness $0$. }
 \end{example}
 \vspace{0.5cm}  
 
 %The next steps are explorations on which conditions are sufficient, and which conditions are necessary.  
 
-We will conclude by ask the following questions. Recall $I_J$ denotes the smallest closed interval containing the Cantor set $J$ and $O_J$ denotes  the largest open interval in $I_J\setminus J$. 
+We will conclude by asking the following questions. Recall $I_J$ denotes the smallest closed interval containing the Cantor set $J$ and $O_J$ denotes  the largest open interval in $I_J\setminus J$. 
 
 
 \begin{enumerate}
-    \item Given a Cantor set $J$, does there exist some $K$ such that $J+K = I_J + I_K$?
-    \item If we assume that there exists $K$ such that  $J +K = I_j + I_K$, can we prove that $J$ is not universal?
-    \item (rescaling condition) If we assume that $|\lambda_1 I_J| \geq |\lambda_2 O_K|, |\lambda_2 I_K| \geq |\lambda_1 O_J|$ and  $J +K = I_J + I_K $, then $ \lambda_1 J + \lambda_2 K = \lambda_1 I_J + \lambda_2 I_k$.
+    \item Given a Cantor set $J$, does there exist some Cantor set $K$ such that $J+K = I_J + I_K$?
+    \item If we assume that there exists $K$ such that  $J +K = I_J + I_K$, can we prove that $J$ is not universal?
+    \item (rescaling condition) If we assume that $|\lambda_1 I_J| \geq |\lambda_2 O_K|, |\lambda_2 I_K| \geq |\lambda_1 O_J|$ and  $J +K = I_J + I_K $, then does $ \lambda_1 J + \lambda_2 K = \lambda_1 I_J + \lambda_2 I_k$?
 \end{enumerate}
 
-We also notice that to solve the second question, we notice that $J+K = I_J+I_K$ implies that 
+We also notice that to solve the second question $J+K = I_J+I_K$ implies that 
 $$
 (J+a)+(K+b) = (I_J+a)+(I_K+b) \ \mbox{and} \  bJ+bK = bI_J+bI_K.
 $$
-We can always translate and rescale $J,K$ so that $I_J = [0,a]$ and $I_K = [0,1]$. Moreover, the following lemma is important. 
+We can always translate and rescale $J,K$ so that $I_J = [0,a]$ and $I_K = [0,1]$. In order to reach the rescaling condition, the following lemma is important.  We do not have a proof and so would need to assume it.
 
 \begin{lemma}\label{lemma_gap}
 Suppose that the Cantor sets $J$ and $K$ satisfies $J +K = I_j + I_K$. Then $|I_J| \ge |O_K|$ and $|I_K|\ge |O_J|$.
@@ -45,16 +47,16 @@ Suppose that the Cantor sets $J$ and $K$ satisfies $J +K = I_j + I_K$. Then $|I_
 
 \medskip
 
-The lemma also said that  the condition $|\lambda_1 I_J| \geq |\lambda_2O_k|, |\lambda_2 I_k| \geq |\lambda_1 O_J|$ is necessary in the rescaling  condition. 
+The lemma also implies that the condition $|\lambda_1 I_J| \geq |\lambda_2O_k|, |\lambda_2 I_k| \geq |\lambda_1 O_J|$ is necessary in the rescaling  condition and cannot be removed from the hypothesis.
 
 \medskip
 
 \begin{proposition}
-Let $J$ be a Cantor set such that $J+K = I_J+I_K$ where $I_J = [0,a]$ and $I_K = [0,1]$. Suppose that the rescaling condition (3) holds. Then $J$ is not universal in the collection of dense $G_{\delta}$. 
+Let $J$ be a Cantor set with another corresponding Cantor set $K$ such that $J+K = I_J+I_K$ where $I_J = [0,a]$ and $I_K = [0,1]$. Suppose that the rescaling condition (3) holds. Then $J$ is not universal in the collection of dense $G_{\delta}$. 
 \end{proposition}
 
 \begin{proof}
-The proof is similar to the proof in Theorem  \ref{theorem_positive_NW}. With $K$ given in the assumption. We can assume that $|I_J|>|O_K|$. Suppose that $|I_J| = |O_K|$. Since $|O_J|<1$, we can choose $\epsilon$ such that $(1-\epsilon) > |O_J|.$  Then we consider $K' = (1-\epsilon)K$ and we will have $|I_J|> (1-\epsilon)|O_K|$. In this case, by the rescaling condition,  $J+K' = I_J+I_{K'}$ and we have another $K'$ such that $|I_J|>|O_{K'}|$.  
+The proof is similar to the proof in Theorem  \ref{theorem_positive_NW}. Given $K$ in the assumption, we can assume that $|I_J|>|O_K|$. This is because if we suppose that $|I_J| = |O_K|$. Since $|O_J|<1$, we can choose $\epsilon$ such that $(1-\epsilon) > |O_J|.$  Then we consider $K' = (1-\epsilon)K$ and we will have $|I_J|> (1-\epsilon)|O_K|$. In this case, by the rescaling condition,  $J+K' = I_J+I_{K'}$ and we have another $K'$ such that $|I_J|>|O_{K'}|$.  
 
 \medskip
 
@@ -62,12 +64,12 @@ As now we have $|I_J|>|O_K|$, we can find $0<\rho<1$ such that $\rho |I_J| > |O_
 $$
 X = \bigcup_{n\in{\mathbb Z}}\bigcup_{\ell\in\Z} \rho^n (K+\ell). 
 $$
-Then $X^c$ is a  dense $G_{\delta}$ set. Suppose that we have an affine copy $t+\lambda J$, we would like to claim that $t+\lambda J$ intersects non-trivially   with $\rho^n (K+\ell)$ for some $n,\ell\in \Z$, which will complete the proof of the theorem. 
+Then $X^c$ is a  dense $G_{\delta}$ set. Suppose that we have an affine copy $t+\lambda J$. We would like to claim that $t+\lambda J$ intersects non-trivially   with $\rho^n (K+\ell)$ for some $n,\ell\in \Z$, which will complete the proof of the theorem. 
 
 \medskip
 
 
-To justify the claim, we let $0<\rho<1$ take the unique $n$ such that 
+To justify the claim, we take the unique $n$ such that 
 \begin{equation}\label{eq_lambda_choice}
     |\lambda| \in [\rho^{n+1}, \rho^{n})
 \end{equation}
@@ -105,13 +107,13 @@ It also contains $t$ by (\ref{eq_t_choice}). The proof is now complete.
 We now conclude with several open questions.
 \begin{conjecture}
     % Cantor sets, which are compact, perfect sets, and totally disconnected.     
-    For any cantor set, does there exist another such that $C_1 + C_2$ adds up to an interval?
+    For any Cantor set, there exist another Cantor set such that $C_1 + C_2$ adds up to an interval.
 \end{conjecture}
 
 
-Does the rescaling condition hold for Cantor sets with zero thickness?
+Does the rescaling condition hold for all Cantor sets with zero thickness?
 
-Our proof inherently relies on appropriately selecting a scalar and translation that corresponds to a regular (or fairly regular) Cantor set.  In this instance we have to find pick the appropriate $\lambda, t$ based off of a set of associated intervals that are not uniform.  Our proof relies on using the regularity to specify where the intersection is. 
+Our proof inherently relies on appropriately selecting a scalar and translation that corresponds to a regular (or fairly regular) Cantor set.  In this instance we have to pick the appropriate $\lambda, t$ based off of a set of associated intervals that are not uniform.  Our proof relies on using the regularity to specify where the intersection is. 
 
 Do all self-similar sets have positive projective Newhouse thickness?  If we consider some of the more commonly known fractals, are they not topologically universal?
 

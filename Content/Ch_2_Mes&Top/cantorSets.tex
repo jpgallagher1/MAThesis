@@ -1,18 +1,15 @@
 \section{Cantor Sets and Other Measure Theoretic and Topological Examples}
-We begin this section with a special $F_\sigma$ set.  The Cantor set is defined by taking the interval $[0,1]$ and then iterate by removing the open interval containing the middle third, from the previous level.  As such it is the countable intersection of closed sets.  Formally this can be written as follows.
-\begin{definition}[Cantor Set]
-    The Cantor set $\mathcal{C}$, written as the successive removal of each middle third removed from the previous level is 
+We begin this section with a special $F_\sigma$ set.  The Cantor set is defined by taking the interval $[0,1]$ and then iterate by removing the open interval containing the middle third, from the previous level.  As such it is the countable intersection of closed sets.  The Cantor set $\mathcal{C}$, written as the successive removal of each middle third removed from the previous level is 
     $$\mathcal{C} = [0,1] \setminus \bigcup_{n=0}^\infty\bigcup_{k=0}^{3^n-1}\left(\frac{3k+1}{3^{n+1}},\frac{3k+2}{3^{n+1}}\right)$$
-\end{definition}
 
-As an $F_\sigma$ set defined on a closed interval with iteratively removed open intervals we see the middle third Cantor set can also be described with the following three properties.
+As an $F_\sigma$ set defined on a closed interval with iteratively removed open intervals, we see the middle third Cantor set can also be described with the following three properties.
 \begin{definition}[Cantor Set]
     \textit{Cantor sets} are compact, perfect sets, and totally disconnected sets.      
 \end{definition}
 
 As a quick reminder to the definitions:
 \begin{definition}[Perfect]
-    A \textit{perfect} set is a closed set that contains no isolated points.
+    A \textit{perfect} set is a closed set that contains no isolated points.  This is equivalent to every point of the closed set is also a limit point of the set.  
 \end{definition}
 \begin{definition}[Totally Disconnected]
     A set is \textit{totally disconnected} if the only connected components are single points. 
@@ -23,18 +20,18 @@ An equivalent formulation of the Cantor set, is the decimal expansion of all num
 \begin{example}[Decimal Expansion Cantor Set]
     $$\mathcal{C}  = \{ x \in [0,1]: \text{ $x$ has a ternary expansion containing no $1$'s.}\}$$
 \end{example}
-Here we notice that although $1/3 \in \mathcal{C} $ can be written as $0.1$ using the ternary expansion, it also has another representation as $1/3 = 0.0\overline{2}$  This would be the included representation in the Cantor set.  We take a moment to acknowledge that numbers may not have unique representations, where one may be excluded but the other included.  
+Here we notice that although $1/3 \in \mathcal{C} $ can be written as $0.1$ using the ternary expansion, it also has another representation as $1/3 = 0.0\overline{2}.$  This would be the included representation in the Cantor set.  We take a moment to acknowledge that numbers may not have unique representations so a number is included if there is a representation of it that contains no $1$'s.  
 
 Earlier we defined nowhere dense. Here we see that the Cantor set is an example of a nowhere dense set.  
 % \begin{definition}[Nowhere dense]
 %     A set $A \subseteq X$ is called \textit{nowhere dense} if its closure $\overline{A}$ has an empty interior.  Equivalently the set $A$ is \textit{nowhere dense} if $A$ is not not dense in any subset $U$ of $X$.  
 % \end{definition}
-\begin{claim}The Cantor set is \textit{nowhere dense}.  
+\begin{claim}The Cantor set is nowhere dense.  
 \end{claim}  
 \begin{proof}
     Let $\mcC$ be the middle third Cantor set.  Notice that $[0,1]\setminus \mcC$ is a set of open intervals: 
     $$ [0,1] \setminus \mathcal{C} =\bigcup_{n=0}^\infty\bigcup_{k=0}^{3^n-1}\left(\frac{3k+1}{3^{n+1}},\frac{3k+2}{3^{n+1}}\right). $$
-    Therefore $\mcC$ is the countable intersection of closed intervals, and itself is closed.  
+    Therefore $\mcC$ is the intersection of closed intervals, and itself is closed.  
     
     Notice given some radius $r$, there exists some number $t$, such that $0<t<r$ and $t$ has a 1 in its ternary expansion.  So if we consider any point $c \in \mcC$, then an open ball of radius $r$ centered at $c$ then $B_r(c)$ is $(c-r, c+r)$ in ternary, necessarily contains a number containing a $1$.  Therefore $B_r(c) \not\subseteq \mcC$, and $\mcC$ has an empty interior.  Finally we conclude because $\mcC$ is closed and has an empty interior, $\mcC$ is nowhere dense.      
 \end{proof}
@@ -86,6 +83,6 @@ Beyond the middle third Cantor set, we can generalize these in a few different w
 \end{example}
 
 \begin{example}[A dense, uncountable set of measure zero]
-As stated above, the middle third Cantor set has measure $0$.  Let $\mcC_q$ denote a cantor set translated by a rational number $q \in \Q$.  This gluing of sets is dense but still measure zero.  This is formed from closed sets. 
+As stated above, the middle third Cantor set has measure $0$.  Let $\mcC_q$ denote a cantor set translated by a rational number $q \in \Q$.  This union of sets is dense but still measure zero.  From measure theory the measure of the union is therefore
 $$\left\vert \bigcup_{q \in \Q} \mcC_q \right\vert \leq  \sum_{q \in \Q}\left\vert\mcC_q\right\vert = 0.$$
 \end{example}

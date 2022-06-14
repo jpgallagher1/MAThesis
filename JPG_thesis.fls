@@ -983,10 +983,6 @@ INPUT ./Content/Ch_2_Mes&Top/topologyBCT.tex
 INPUT Content/Ch_2_Mes&Top/topologyBCT.tex
 INPUT ./Content/Ch_2_Mes&Top/topologyBCT.tex
 INPUT Content/Ch_2_Mes&Top/topologyBCT.tex
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/latex-fonts/lasy5.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
@@ -1009,6 +1005,10 @@ INPUT ./Content/Ch_2_Mes&Top/cantorSets.tex
 INPUT Content/Ch_2_Mes&Top/cantorSets.tex
 INPUT ./Content/Ch_2_Mes&Top/cantorSets.tex
 INPUT Content/Ch_2_Mes&Top/cantorSets.tex
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /usr/local/texlive/2022/texmf-dist/fonts/tfm/public/latex-fonts/lasy5.tfm
 INPUT ./Content/Ch_3_Main/thicknessGapLemma.tex
 INPUT Content/Ch_3_Main/thicknessGapLemma.tex
 INPUT ./Content/Ch_3_Main/thicknessGapLemma.tex

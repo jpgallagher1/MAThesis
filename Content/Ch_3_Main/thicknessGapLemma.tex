@@ -3,16 +3,16 @@ Cantor sets contain important invariant structures such as Hausdorff dimension, 
 
   
 \begin{definition}[Gap]
-    Let $K$ be some Cantor set.  A \textit{gap} of $K$ is a connected components of $\R \setminus K$.      
-\end{definition}  Informally, the gaps are the intervals surrounding the points of the Cantor set.  Some of the lengths of these intervals are bounded some are not.  In the example of the middle third Cantor set, the unbounded gaps would be $(-\infty, 0)$ and $(1, \infty)$.  
+    Let $K$ be some Cantor set.  A \underline{gap} of $K$ is a connected component of $\R \setminus K$.      
+\end{definition}  Informally, the gaps are the intervals surrounding the points of the Cantor set.  Some of the lengths of these intervals are bounded, some are not.  In the example of the middle third Cantor set, the unbounded gaps would be $(-\infty, 0)$ and $(1, \infty)$.  
 
 \begin{definition}[Bounded Gap]
-    Let $K$ be a Cantor set.  A \textit{bounded gap} is a bounded connected component of $\R \setminus K$.      
+    Let $K$ be a Cantor set.  A \underline{bounded gap} is a bounded connected component of $\R \setminus K$.      
 \end{definition}
 
-Using these two notions we will define the \textit{bridge} of $C$ of Cantor set $K$.  
+Using these two notions we will define the \underline{bridge} $C$ of Cantor set $K$.  
 \begin{definition}[Bridge]\cite{palis&takens}
-    Let $K$ be some cantor set and $U$ be a bounded gap of $K$ with boundary point $u$.  The \textit{bridge} $C$ of $K$ at $u$ is the maximal interval in $\R$ such that:
+    Let $K$ be some cantor set and $U$ be a bounded gap of $K$ with boundary point $u$.  The \underline{bridge} $C$ of $K$ at $u$ is the maximal interval in $\R$ such that:
     \begin{itemize}
         \item $u$ is a boundary point of $C$
         \item $C$ contains no point of a gap $U'$ whose length $\ell(U') \geq \ell(U)$..
@@ -38,23 +38,23 @@ For clarity the picture below shows that there may be smaller bounded gaps conta
 \end{tikzpicture}
 % \end{figure}
 
-We use this notion to define the \textit{Newhouse Thickness}.  Intuitively the thickness of a Cantor set can be thought of as a the infimimum of ratios between the bounded gaps and the bridges.  
+We use this notion to define the \underline{Newhouse Thickness}.  Intuitively the thickness of a Cantor set can be thought of as a the infimimum of ratios between the bounded gaps and the bridges.  
 \begin{definition}[Newhouse Thickness \cite{palis&takens}]
-    The \textit{Newhouse Thickness or thickness of $K$ at $u$} is defined as
+    Let $K$ be some cantor set and $U$ be a bounded gap of $K$ with boundary point $u$ and let $C$ be the bridge $K$ at $u$.  The \underline{Newhouse Thickness or thickness of $K$ at $u$} is defined as
     $$\tau(K, u) = \frac{\ell(C)}{\ell(U)}.$$
-    Moreover for $\mathcal{U} = \{ \text{set of all boundary points of bounded gaps}\}$, the thickness of the entire Cantor set is 
-    $$\tau(K) = \inf_{u\in \mathcal{U}} \tau(K, u) = \inf_{u\in \mathcal{U}}\frac{\ell(C)}{\ell(U)}.$$
+    Moreover for $\mathcal{U} = \{ \text{boundary points of bounded gaps}\}$, the thickness of the entire Cantor set is 
+    $$\tau(K) = \inf_{u\in \mathcal{U}} \tau(K, u) = \inf_{u\in \mathcal{U}}\frac{\ell(C)}{\ell(U)}$$
 \end{definition}
 This helps us develop a language to talk about the relative sizes of Cantor sets that is slightly separated from the notion of measure.  Importantly it also helps us for a sufficient condition for our main theorem.
 
-Here we will calculate a few examples of Newhouse Thickness.  Recall the middle third Cantor set.  
+Here we will calculate a few examples of Newhouse Thickness.  
 \begin{example}[Newhouse Thickness of the Middle\hyphen{third} Cantor Set]
-    Let $K$ be the middle third cantor set.  Then the Newhouse thickness is the infimum of the ratio between gaps and bridges.  Here we notice that every bounded gap is one third the previous bridge.  Therefore the Newhouse thickness of the set is 
+    Let $K$ be the middle third Cantor set.  Then the Newhouse thickness is the infimum of the ratio between gaps and bridges.  Here we notice that every bounded gap is one third the previous bridge.  Therefore the Newhouse thickness of the set is 
     $$\tau(K) = \inf_{u\in K}\frac{\ell(C)}{\ell(U)} = \frac{\frac{1}{3}}{\frac{1}{3}} = 1.$$
 \end{example}
 
 \begin{example}[Newhouse Thickness of the $N$\hyphen{digit} Cantor Set]
-    Let $K$ be an $N$\hyphen{digit} Cantor set.  Each gap at the $n$\hyphen{th} level is of has length $N^{-n}$.  We take a moment to note that the location of the gap matters because it affects the thickness.  If we assume that for $2 \leq j \leq n-1$, the $j$\hyphen{th} digit is removed then we end up with the following cantor set. 
+    Let $K$ be an $N$\hyphen{digit} Cantor set.  Each gap at the $n$\hyphen{th} level is of has length $N^{-n}$.  We take a moment to note that the location of the gap matters because it affects the thickness.  If we assume that for $2 \leq j \leq n-1$, the $j$\hyphen{th} digit is removed then we end up with the following Cantor set. 
     % Damn I drew the wrong pictures... should have just copied from above.
     % \begin{tikzpicture}
     %     \draw (-7,-0.75) -- (7,-0.75) ; %total length 14
@@ -101,7 +101,7 @@ Here we will calculate a few examples of Newhouse Thickness.  Recall the middle 
     \end{tikzpicture}
 
     With this picture in mind lets take the infimum of the ratios.  The thickness of the $N$\hyphen{digit} expansion Cantor set is 
-    $$\tau(K) = \inf_{u\in K}\frac{\ell(C)}{\ell(U)} = \min\left\{j,N-j-1\right\}$$
+    $$\tau(K) = \inf_{u\in K}\frac{\ell(C)}{\ell(U)} = \min\left\{j,N-j-1\right\}.$$
 \end{example}  
 %include examples of calculating newhouse thickness
 %Cantor set Middle Third
@@ -110,13 +110,13 @@ Here we will calculate a few examples of Newhouse Thickness.  Recall the middle 
 %Also note that all self-similar Cantor sets in \R^1 have positive newhouse thickness
 \section{The Gap Lemma}
 
-The Gap lemma was originally introduced by Newhouse in his paper ``The Abundance of Wild Hyperbolic Sets and Non-Smooth Stable Sets for Diffeomorphism," \cite{Newhouse}.  This lemma proves to be useful in dynamical systems. The proof of the lemma below is borrowed from Palis and Takens ``Hyperbolicity \& Sensitive Chaotic Dynamics at Homoclinic Bifurcations." Since their proof was also brief, we expand their proof with more details below.  There has also been additional work by Astels, where in his dissertation \cite{Astels} he details the structure of the intersections. 
+The Gap Lemma was originally introduced by Newhouse in his paper ``The Abundance of Wild Hyperbolic Sets and Non-Smooth Stable Sets for Diffeomorphism," \cite{Newhouse}.  This lemma proves to be useful in dynamical systems. The proof of the lemma below is borrowed from Palis and Takens ``Hyperbolicity \& Sensitive Chaotic Dynamics at Homoclinic Bifurcations."\cite{palis&takens} Since their proof was also brief, we expand on their proof with more details below.  There has also been additional work by Astels, where in his dissertation \cite{Astels} he details the structure of the intersections. 
 
 
 
 
 \begin{lemma}[The Gap Lemma\cite{palis&takens}]
-    Let $K_1, K_2, \subset \R$ be Cantor sets with thickness $\tau_1$ and  $\tau_2$.  If $\tau_1 \cdot \tau_2 >1,$  $K_1$ is not contained the gap of $K_2$, $K_2$ is not contained in the gap of $K_1$ then $K_1 \cap K_2 \neq \emptyset.$
+    Let $K_1, K_2, \subset \R$ be Cantor sets with thickness $\tau_1$ and  $\tau_2$.  If $\tau_1 \cdot \tau_2 >1,$  $K_1$ is not contained the gap of $K_2$ and $K_2$ is not contained in the gap of $K_1$, then $K_1 \cap K_2 \neq \emptyset.$
 \end{lemma}
 % First we will assume for the sake of contradiction that the opposite is true.  These assumptions lead to claim, which under these assumptions must be true.  Then that claim leads to a contradiction which means our original assumption must be false.  
 \begin{proof}

@@ -1,16 +1,16 @@
 \section{Some Measure Theoery}
 
-First we want to begin with background definitions and theorems.  Erd\"{o}s' problem specifically deals with infinite set, and affine copies found in measurable set of sets.  In our problem, rather than dealing with measurable sets, we will instead use the set of dense $G_\delta$ sets.  
+First we want to begin with background definitions and theorems.  Erd\H{o}s' problem specifically deals with infinite sets, and affine copies found in sets of measurable sets.  In our problem, rather than dealing with measurable sets, we will instead use the set of dense $G_\delta$ sets.  
 
-Underpinning the nuances of this problem, measure theoretic size, and topological size, are not the same. From an intuitive sense of the number line one might think when you are scattered throughout an interval, you would have measure, except in special cases. Similarly one might think that if you have measure, then you would be scattered everywhere.  However both of these instances fail when you add in rigorous arguments.  Indeed it is possible to construct a set that is no-where dense and has positive measure.  It is also possible to construct an uncountable set that is dense and has measure. zero.
+Underpinning the nuances of this problem, measure theoretic size, and topological size, are not the same. From an intuitive sense of the number line one might think when you are scattered throughout an interval, you would have measure, except in special cases. Similarly one might think that if you have measure, then you would not be scattered everywhere.  However both of these instances fail when you add in rigorous arguments.  Indeed it is possible to construct a set that is no-where dense and has positive measure.  It is also possible to construct an uncountable set that is dense and has measure zero.
  In other words topological size (density) is not the same thing as measure theoretic size. 
 
-First we will review some measure theory.  In order to define \textit{measure} and \textit{measurable sets} we first need to define $\sigma$\hyphen{Algebra.}   
+First we will review some measure theory.  In order to define \textit{measure} and \textit{measurable sets} we first need to define $\sigma$\hyphen{algebras.}   
 
 
 
 \begin{definition}[$\sigma$-Algebra]
-    Let $X$ be some set and $2^X$ be the set of subsets of $X$. Let $\Sigma \subseteq 2^X$. We call $\Sigma$ a $\sigma-$algebra over $X$ if it satisfies the following three conditions:
+    Let $X$ be some set and $2^X$ be the set of subsets of $X$. Let $\Sigma \subseteq 2^X$. We call $\Sigma$ a $\sigma$\hyphen{algebra} over $X$ if it satisfies the following three conditions:
     \begin{enumerate}
         \item $\emptyset \in \Sigma$
         \item If $E \in \Sigma$, then $X\setminus E \in \Sigma$. 
@@ -18,31 +18,30 @@ First we will review some measure theory.  In order to define \textit{measure} a
     \end{enumerate}
 \end{definition}
 
-In this instance we describe set of sets in terms of intersection and union.  This allows us to generate an algebraically closed collection of sets.  
+In this instance we describe set of sets in terms of intersection and union.  This allows us to generate an closed collection of sets under these operations of relative complement and union.  
 
 In the Erd\H{o}s conjecture, the measure is specifically referencing \textit{Lebesgue Measure}.  First we define \textit{Lebesgue outer measure} which is defined on all sets. Then to define \textit{Lebesgue Measure} we will restrict the universe to the appropriate sigma algebra of measurable sets. For details about measure theory, please refer to \cite{Axler} and \cite{Stein&Shak}.
 
 \begin{definition}[Lebesgue Outer Measure \cite{Axler}]
-    For any interval $I = [a,b]$ (or $I = (a, b)$) in the set $\mathbb{R}$ of real numbers, let $\ell(I)= b - a$ denote its length. For any subset $E\subseteq\mathbb{R}$, the \textit{Lebesgue outer measure} $\lambda^*(E)$ is defined as an $\inf:$ 
+    For any interval $I = [a,b]$ (or $I = (a, b)$) in the set $\mathbb{R}$ of real numbers, let $\ell(I)= b - a$ denote its length. For any subset $E\subseteq\mathbb{R}$, the \textit{Lebesgue outer measure} $\lambda^*(E)$ is defined as an infimum: 
     
     $$\lambda^*(E) = \inf \left\{\sum_{k=1}^\infty \ell(I_k) : {(I_k)_{k \in \mathbb N}} \text{ is a sequence of open intervals with } E\subset \bigcup_{k=1}^\infty I_k\right\}.$$
 \end{definition}
 
-Finally we define Lebbesgue measurable sets, and Lebesgue measure.  
+Finally we define Lebesgue measurable sets and Lebesgue measure. 
 \begin{definition}[Lebesgue Measurable Sets \cite{Stein&Shak}]
     A subset $E\subset \R$ is \textit{Lebesgue measurable} if for any $\epsilon > 0$, there exists some open subset $\mathcal{O}\subset \R$ such that 
     $E\subset \mathcal{O}$ and 
     $$\lambda^*(E - \mathcal{O}) < \epsilon. $$
-    The collection of all Lebesgue measurable sets form a $\sigma$-algebra of ${\mathbb R}$. 
+    The collection of all Lebesgue measurable sets form a $\sigma$-algebra of ${\mathbb R}$. The Lebesgue measure is the outer measure defined on this $\sigma$-algebra.  
 \end{definition}
 \begin{definition}[Lebesgue Measure\cite{Stein&Shak}]
-    The Lebesgue measure is the outer measurable defined on the $\sigma$-algebra from the Lebesgue measurable sets. That is to say:
+    The Lebesgue measure is the outer measure defined on the $\sigma$-algebra from the Lebesgue measurable sets. That is to say:
     If $E$ is Lebesgue measurable then we define the \textit{Lebesgue measure} as 
     $$\lambda(E) = \lambda^*(E).$$
 \end{definition}
 
-Notice that not all sets are necessarily Lebesgue measurable, such as Vitali sets.  We do however make one conjecture in chapter 4 noting that all measurable sets with positive measure contain a non-measurable set.  
-
+Notice that not all sets are necessarily Lebesgue measurable, such as Vitali sets.  We will not explore non-measurable sets because it falls outside of the scope of our current theorems.  We do however make one conjecture in chapter 4 noting that all measurable sets with positive measure contain a non-measurable set.  
 
 % Now if we have a base definition of measure, we are also able to contruct our colleciton of sets, on which measure is defined.   
 
